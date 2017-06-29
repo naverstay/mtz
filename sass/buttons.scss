@@ -1,0 +1,140 @@
+//************  buttons
+
+.btn_v1 {
+  height: 56 * $m;
+
+  &.details_btn {
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 2 * $m;
+    overflow: hidden;
+    font-family: $DINAlternateBold;
+    line-height: 1.3;
+    letter-spacing: -.06em;
+
+    .btn_text {
+      overflow: hidden;
+      display: block;
+      position: relative;
+      margin-right: -1px;
+      padding: 16 * $m 90 * $m 16 * $m 33 * $m;
+
+      span {
+        position: relative;
+        z-index: 1;
+      }
+    }
+    
+    .btn_icon {
+      padding-top: 14 * $m;
+    }
+    
+  }
+
+  &.learn_more_btn {
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 2 * $m;
+    padding-right: 78 * $m;
+    overflow: hidden;
+    font-family: $DINAlternateBold;
+    line-height: 1.3;
+    letter-spacing: -.06em;
+
+    .btn_text {
+      overflow: hidden;
+      display: block;
+      position: relative;
+      margin-right: -1px;
+      padding: 16 * $m 37 * $m;
+
+      span {
+        position: relative;
+        z-index: 1;
+      }
+    }
+
+    &.btn_white {
+      .btn_icon {
+        color: #fff !important;
+      }
+    }
+  }
+}
+
+.btn_icon {
+  @include transition_all(color .3s);
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 78 * $m;
+  padding: 16 * $m 5 * $m;
+}
+
+.btn_blue_transp {
+  border: 1px solid #29abe2;
+  color: #fff;
+}
+
+.green_btn {
+  color: #fefefe;
+  background: #22b573;
+}
+
+.btn_white {
+  position: relative;
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+
+  .btn_text {
+    @include transition_all(color .3s);
+    border-right: 1px solid #fff;
+
+    &:before {
+      @include transition_all(transform .3s);
+      @include transform_translate(-100%, 0);
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: -5px;
+      right: -5px;
+      background: #fff;
+    }
+  }
+
+  &:hover {
+    @include transition_all(color .3s);
+    color: #000;
+
+    .btn_text {
+      &:before {
+        @include transform_translate(0, 0);
+      }
+    }
+  }
+
+  &:active {
+    .btn_text:before {
+      background: #e8e8e8;
+    }
+  }
+}
+
+.btn_red {
+  color: #fff;
+  background: #f46b65;
+}
+
+.yellow_btn {
+  background: #fbe622;
+  color: #000;
+  box-shadow: 0 3px 5px #7f7f7f;
+}
+

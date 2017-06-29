@@ -1,0 +1,19 @@
+@import "includes/global_var";
+@import "reset";
+@import "fonts";
+//@import "datapicker";
+//@import "dialog_global";
+@import "font_icons";
+@import "animate";
+@import "../mtz_icons/style.scss";
+
+@import "validationEngine.jquery";
+@import "jquery.ui.all";
+@import "header";
+@import "first_screen";
+
+// all
+@import "forms";
+@import "buttons";
+@import "tables";
+@import "footer";

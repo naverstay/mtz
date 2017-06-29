@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1238px" height="619px" viewBox="0 0 1238 619" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>arc4</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="100%" x2="50%" y2="0%" id="linearGradient-1">
+            <stop stop-color="#1D7874" offset="0%"></stop>
+            <stop stop-color="#1D7874" offset="42.8989955%"></stop>
+            <stop stop-color="#1D7874" stop-opacity="0.515794837" offset="78.6192602%"></stop>
+            <stop stop-color="#1D7874" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(0.000000, -619.000000)" fill-rule="nonzero" fill="url(#linearGradient-1)">
+            <g id="arc4" transform="translate(0.000000, 619.000000)">
+                <path d="M1.13686838e-13,0 C-3.36958076e-13,341.859815 277.131292,619 619,619 C960.868708,619 1238,341.859815 1238,4.50547862e-13 L1075.46146,4.54747351e-13 C1075.46146,253.224812 872.196825,456.496033 619,456.496033 C383.444727,456.496033 191.374964,280.832941 165.474782,52.1789014 C163.535027,35.0542066 162.538541,17.643502 162.538541,4.54747351e-13 L1.13686838e-13,0 Z" id="Oval-4-Copy-5"></path>
+            </g>
+        </g>
+    </g>
+</svg>

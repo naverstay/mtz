@@ -1,0 +1,328 @@
+extends _layout.pug
+include _mixins.pug
+
+block variables
+  - var $m = 0.0714286666666667;
+  - var page_title = 'MTZ главная';
+  - var html_class = 'home_page';
+  - var body_class = 'logo_white header_white';
+  - var has_footer = false;
+  - var nav_active = 0;
+  - var dropdown_active = 0;
+  - var menu_open_dt = true;
+
+block content
+  .bg_video
+    .video_block
+      video#bgvid.video_block(muted="muted", loop="loop")
+        source(src="video/video_bg.webm", type="video/webm")
+        source(src="video/video_bg.mp4", type="video/mp4")
+
+  .aside_holder
+    .aside_nav.asideNav
+      .aside_nav_prev.prevSlide
+        img(src='i/arrow_carrot_up.svg')
+      .aside_nav_tip.prevTip._prev
+      .aside_nav_next.nextSlide
+        img(src='i/arrow_carrot_down.svg')
+      .aside_nav_tip.nextTip._next
+
+      .aside_nav_label_holder
+        .aside_nav_label.asideNavLabel
+
+  .main_slider.pageSlider
+    .slide_section.section_v1(data-header-white=1 data-nav-prev=0 data-nav-next=1 data-nav-shifted=0 data-slide-label='<span class="fz_24">Продукция</span>' data-nav-prev-tip='<div class="fz_20"></div><div class="fz_16 nav_tip_label"></div>' data-nav-next-tip='<div class="fz_20">Трубы бесшовные </div><div class="fz_16 nav_tip_label">Следующее </div>')
+      .gl_table
+        .gl_table_cell._vb
+          .section_inner
+            .section_caption.fadeMeUp.mb_10(style='opacity: 0;' data-fade-delay=0)
+              span.fz_48.let-_038 Мытищинский трубный завод
+            p.fadeMeUp(style='opacity: 0;' data-fade-delay=800)
+              span.fz_30.lh_1_1 Всегда низкие цены. <br>Производим трубы больших диаметров
+              
+            .section_control.fadeMeIn(style='opacity: 0;' data-fade-delay=1400)
+              .btn_v1.btn_white.learn_more_btn.scrollTo(data-href='#graph_section')
+                span.btn_text
+                  span.fz_20 Узнать больше
+                span.btn_icon
+                  span.i-arrow_down.fz_24
+
+    #graph_section.slide_section.section_v2(data-marker='marker_2' data-header-white=0 data-nav-prev=0 data-nav-next=1 data-nav-shifted=0 data-slide-label='<span class="fz_24">Продукция</span>' data-nav-prev-tip='<div class="fz_20"></div><div class="fz_16 nav_tip_label"></div>' data-nav-next-tip='<div class="fz_20">Трубы бесшовные </div><div class="fz_16 nav_tip_label">Следующее </div>')
+      .gl_table
+        .gl_table_cell._vm
+          .section_inner
+            .guaranty_block
+              .section_caption.fadeMeUp(style='opacity: 0;' data-fade-delay=0)
+                span.fz_28.let-_038 Гарантируем высокое качество, при постоянно низкой цене!
+              p.fw_med.fadeMeUp(style='opacity: 0;' data-fade-delay=600)
+                span.fz_14 Стоимость одной тонны трубной продукции по ГОСТ 20295-85, марка <br> стали 17Г1С, диаметр трубы 1420 мм
+  
+              .graphUnit.fadeMeIn(style='opacity: 0;' data-fade-delay=1800)
+                .chart_holder
+                  .chartPrice.chart
+  
+                .legend_holder.graphLegend
+
+    .slide_section.section_v1.product_section(data-header-white=1 data-nav-prev=0 data-nav-next=1 data-nav-shifted=1 data-slide-label='<img data-width="' + 502 * $m + 'em" data-height="' + 270 * $m + 'em" src="i/prod_1.png">' data-nav-prev-tip='<div class="fz_20"></div><div class="fz_16 nav_tip_label"></div>' data-nav-next-tip='<div class="fz_20">Трубы электросварные</div><div class="fz_16 nav_tip_label">Следующее </div>')
+      .gl_table
+        .gl_table_cell._vm
+          .section_inner
+            .section_caption.fadeMeUp(style='opacity: 0;' data-fade-delay=0)
+              span.fz_48.let-_045 Трубы бесшовные
+              
+            ul.features_holder
+              li.fadeMeUp(style='opacity: 0;' data-fade-delay=800)
+                dl.features_list
+                  dt 
+                    span.fz_20 ГОСТ, ТС
+                  dd.hide
+                  
+                  dt 
+                    span.fz_20 от 530 до 1620 мм
+                  dd 
+                    span.fz_16.let-_045 Диаметр
+                  
+                  dt 
+                    span.fz_20 от 0,4 до 4 МПа
+                  dd 
+                    span.fz_16.let-_045 Допустимое давление
+              
+                  dt 
+                    span.fz_20 Ст 3, Ст 20, 09Г2С, 17Г1С
+                  dd 
+                    span.fz_16.let-_045 Марки стали
+              
+              li.fadeMeIn(style='opacity: 0;' data-fade-delay=1600)
+                p
+                  span.fz_20 Мы производим трубы только из сертифицированной стали с соблюдением всех технологических требований.
+                  
+            .section_control.mod_1.fadeMeIn(style='opacity: 0;' data-fade-delay=2000)
+              a.btn_v1.btn_white.details_btn(href='#')
+                span.btn_text
+                  span.fz_20 Подробнее
+                span.btn_icon
+                  span.i-arrow_right.fz_28
+                  
+    .slide_section.section_v1.product_section(data-header-white=1 data-nav-prev=1 data-nav-next=1 data-nav-shifted=1 data-slide-label='<img data-width="' + 502 * $m + 'em" data-height="' + 270 * $m + 'em" src="i/prod_1.png">' data-nav-prev-tip='<div class="fz_20">Трубы бесшовные</div><div class="fz_16 nav_tip_label">Предыдущее </div>' data-nav-next-tip='<div class="fz_20">Отводы сварные<br>секторные</div><div class="fz_16 nav_tip_label">Следующее </div>')
+      .gl_table
+        .gl_table_cell._vm
+          .section_inner
+            .section_caption.fadeMeUp(style='opacity: 0;' data-fade-delay=0)
+              span.fz_48.let-_045 Трубы электросварные
+
+            ul.features_holder
+              li.fadeMeUp(style='opacity: 0;' data-fade-delay=800)
+                dl.features_list
+                  dt
+                    span.fz_20 ГОСТ, ТС
+                  dd.hide
+
+                  dt
+                    span.fz_20 от 530 до 1620 мм
+                  dd
+                    span.fz_16.let-_045 Диаметр
+
+                  dt
+                    span.fz_20 от 0,4 до 4 МПа
+                  dd
+                    span.fz_16.let-_045 Допустимое давление
+
+                  dt
+                    span.fz_20 Ст 3, Ст 20, 09Г2С, 17Г1С
+                  dd
+                    span.fz_16.let-_045 Марки стали
+
+              li.fadeMeIn(style='opacity: 0;' data-fade-delay=1600)
+                p
+                  span.fz_20 Мы производим трубы только из сертифицированной стали с соблюдением всех технологических требований.
+
+            .section_control.mod_1.fadeMeIn(style='opacity: 0;' data-fade-delay=2000)
+              a.btn_v1.btn_white.details_btn(href='#')
+                span.btn_text
+                  span.fz_20 Подробнее
+                span.btn_icon
+                  span.i-arrow_right.fz_28
+                  
+    .slide_section.section_v1.product_section(data-header-white=1 data-nav-prev=1 data-nav-next=1 data-nav-shifted=1 data-slide-label='<img data-width="' + 396 * $m + 'em" data-height="' + 259 * $m + 'em" src="i/prod_2.png">' data-nav-next-tip='<div class="fz_20">Тройники сварные</div><div class="fz_16 nav_tip_label">Следующее </div>' data-nav-prev-tip='<div class="fz_20">Трубы электросварные</div><div class="fz_16 nav_tip_label">Предыдущее </div>')
+      .gl_table
+        .gl_table_cell._vm
+          .section_inner.mod_1
+            .section_caption.fadeMeUp(style='opacity: 0;' data-fade-delay=0)
+              span.fz_48.let-_045.lh_1 Отводы сварные <br>секторные
+
+            ul.features_holder
+              li.fadeMeUp(style='opacity: 0;' data-fade-delay=800)
+                dl.features_list
+                  dt
+                    span.fz_20 ОСТ, СК, ТС
+                  dd.hide
+
+                  dt
+                    span.fz_20 от 15 до 90 градусов
+                  dd
+                    span.fz_16.let-_045 Угол
+
+                  dt
+                    span.fz_20 от 530 до 1620 мм
+                  dd
+                    span.fz_16.let-_045 Диаметр
+
+                  dt
+                    span.fz_20 от 1 до 2,5 МПа
+                  dd
+                    span.fz_16.let-_045 Допустимое давление
+
+                  dt
+                    span.fz_20 Ст 3, Ст 20, 09Г2С, 17Г1С
+                  dd
+                    span.fz_16.let-_045 Марки стали
+
+              li.fadeMeIn(style='opacity: 0;' data-fade-delay=1600)
+                p
+                  span.fz_20 Сварные секторные отводы (колена)  - необходимый элемент при прокладке трубопровода.
+
+            .section_control.mod_1.fadeMeIn(style='opacity: 0;' data-fade-delay=2000)
+              a.btn_v1.btn_white.details_btn(href='#')
+                span.btn_text
+                  span.fz_20 Подробнее
+                span.btn_icon
+                  span.i-arrow_right.fz_28
+                  
+    .slide_section.section_v1.product_section(data-header-white=1 data-nav-prev=1 data-nav-next=0 data-nav-shifted=1 data-slide-label='<img data-width="' + 357 * $m + 'em" data-height="' + 322 * $m + 'em" src="i/prod_3.png">' data-nav-next-tip='<div class="fz_20"></div><div class="fz_16 nav_tip_label"></div>' data-nav-prev-tip='<div class="fz_20">Отводы сварные <br>секторные</div><div class="fz_16 nav_tip_label">Предыдущее </div>')
+      .gl_table
+        .gl_table_cell._vm
+          .section_inner.mod_2
+            .section_caption.fadeMeUp(style='opacity: 0;' data-fade-delay=0)
+              span.fz_48.let-_045.lh_1 Тройники сварные 
+
+            ul.features_holder
+              li.fadeMeUp(style='opacity: 0;' data-fade-delay=800)
+                dl.features_list
+                  dt
+                    span.fz_20 ОСТ, СК, ТС
+                  dd.hide
+
+                  dt
+                    span.fz_20 от 15 до 90 градусов
+                  dd
+                    span.fz_16.let-_045 Угол
+
+                  dt
+                    span.fz_20 от 530 до 1620 мм
+                  dd
+                    span.fz_16.let-_045 Диаметр
+
+                  dt
+                    span.fz_20 от 1 до 2,5 МПа
+                  dd
+                    span.fz_16.let-_045 Допустимое давление
+
+                  dt
+                    span.fz_20 Ст 3, Ст 20, 09Г2С, 17Г1С
+                  dd
+                    span.fz_16.let-_045 Марки стали
+
+              li.fadeMeIn(style='opacity: 0;' data-fade-delay=1600)
+                p
+                  span.fz_20 Стальной сварной тройник в трубопроводах используется для отвода части переносимого трубопроводом вещества следующему элементу схемы.
+
+            .section_control.mod_1.fadeMeIn(style='opacity: 0;' data-fade-delay=2000)
+              a.btn_v1.btn_white.details_btn(href='#')
+                span.btn_text
+                  span.fz_20 Подробнее
+                span.btn_icon
+                  span.i-arrow_right.fz_28
+                  
+    .slide_section.section_v1(data-header-white=1 data-nav-prev=1 data-nav-next=0 data-nav-shifted=0 data-slide-label='<span class="fz_24">Продукция</span>' data-nav-next-tip='<div class="fz_20"></div><div class="fz_16 nav_tip_label"></div>' data-nav-prev-tip='<div class="fz_20">Отводы сварные <br>секторные</div><div class="fz_16 nav_tip_label">Предыдущее </div>')
+      .gl_table
+        .gl_table_cell._vt
+          .section_inner.mod_1
+            ul.info_list
+              li.wide
+                .section_caption.fadeMeUp(style='opacity: 0;' data-fade-delay=0)
+                  span.fz_48.let-_045 Мытищинскиий <br> трубный завод
+              li 
+                .iso_block.fadeMeUp(style='opacity: 0;' data-fade-delay=400)
+                  span.fz_48.let-_05 ISO 9001
+                  
+              li.wide
+                p.fadeMeUp(style='opacity: 0;' data-fade-delay=800)
+                  span.fz_20 Мы в самой важной задачей видим выпуск недорогой продукции, по фиксированным ценам, сертифицированной и соответствующей ГОСТ, ОСТ, ТУ и др. <br>На сегодняшний день, в своем распоряжении мы имеем производственный, административный, складской комплекс зданий и автохозяйство. Введены в эксплуатацию автоматизированные сварочные центры концерна ESAB, станки для механической обработки кромки труб и другое оборудование.
+              li
+                p.fadeMeUp(style='opacity: 0;' data-fade-delay=1200)
+                  span.fz_20 СМК предприятия соответствует международным стандартам качества
+                  
+    .slide_section.section_v2(data-header-white=0 data-nav-prev=1 data-nav-next=0 data-nav-shifted=0 data-slide-label='<span class="fz_24">Продукция</span>' data-nav-next-tip='<div class="fz_20"></div><div class="fz_16 nav_tip_label"></div>' data-nav-prev-tip='<div class="fz_20">Отводы сварные <br>секторные</div><div class="fz_16 nav_tip_label">Предыдущее </div>')
+      .gl_table
+        .gl_table_cell._vt
+          .section_inner.mod_1
+            .delivery_info
+              .section_caption.fadeMeUp.mb_40(style='opacity: 0;' data-fade-delay=0)
+                span.fz_48.let-_038 Осуществляем доставку <br>по всей России
+                
+              p.fadeMeUp(style='opacity: 0;' data-fade-delay=400)
+                span.fz_20 Мы сотрудничаем с ведущими грузоперевозчиками. Наш менеджер сам свяжется с оператором доставки, согласует все детали и выставит вам счет без каких-либо наценок
+              
+            .map_holder.mapHolder.fadeMeIn(style='opacity: 0;' data-fade-delay=1200)
+              +svg_map()
+              
+    .slide_section.section_v1(data-header-white=1 data-nav-prev=1 data-nav-next=0 data-nav-shifted=0 data-slide-label='<span class="fz_24">Продукция</span>' data-nav-next-tip='<div class="fz_20"></div><div class="fz_16 nav_tip_label"></div>' data-nav-prev-tip='<div class="fz_20">Отводы сварные <br>секторные</div><div class="fz_16 nav_tip_label">Предыдущее </div>')
+      .gl_table
+        .gl_table_cell._vt
+          .section_inner.mod_1
+            ul.contacts_list
+              li.fadeMeUp(style='opacity: 0;' data-fade-delay=0)
+                ul.nav_links
+                  li: a.nav_link.din_bold(href='#'): span.fz_30 Продукция
+                  li: a.nav_link(href='#'): span.fz_18 Трубы бесшовные
+                  li: a.nav_link(href='#'): span.fz_18 Трубы электросварные
+                  li: a.nav_link(href='#'): span.fz_18 Отводы сварные секторные
+                  li: a.nav_link(href='#'): span.fz_18 Тройники сварные
+            
+              li.fadeMeUp(style='opacity: 0;' data-fade-delay=400)
+                ul.nav_links.din_bold
+                  li: a.nav_link(href='#'): span.fz_30 Производство
+                  li: a.nav_link(href='#'): span.fz_30 Доставка
+                  li: a.nav_link(href='#'): span.fz_30 О комапнии
+                  li: a.nav_link(href='#'): span.fz_30 Контакты
+            
+              li.contacts_col.fadeMeUp(style='opacity: 0;' data-fade-delay=800)
+                ul.contacts_info
+                  li
+                    .contact_icon
+                      span.i-phone.fz_28
+                    .dm
+                      p: span.fz_16 +7 (495) 724-10-31
+                      p: span.fz_16 +7 (495) 724-60-31
+                  
+                  li
+                    .contact_icon
+                      span.i-envelope.fz_28
+                    .dm
+                      p
+                        a.nav_link(href='mailto:info@mtzavod.ru'): span.fz_16 info@mtzavod.ru
+                  
+                  li
+                    .contact_icon
+                      span.i-pin.fz_30
+                    .dm
+                      p
+                        span.fz_16 144006, Московская обл.,
+                      p
+                        span.fz_16 г. Электросталь, ул. Красная, д. 11
+                  li
+                    .contact_icon
+                      span.i-clock.fz_28
+                    .dm
+                      p
+                        span.fz_16 Режим работы:
+                      p
+                        span.fz_16 Пн-Пт с 9:00 до 18:00
+
+      .copyrights.fadeMeIn(style='opacity: 0;' data-fade-delay=1600)
+        .section_inner
+          .fl 
+            span © 2008-2017 ООО "Мытищинский трубный завод", производство и продажа электросварных труб
+            
+          .fr
+            span Разработано в Yoldi.ru

@@ -1,0 +1,120 @@
+.footer {
+  padding-top: 10px;
+  line-height: 100px;
+  background: #686151;
+  border-bottom: 2px solid #fff;
+
+  .section_inner {
+    padding: 0 25px;
+  }
+}
+
+.popup {
+  background: #f4f4f4;
+  padding: 0 20px 20px;
+  text-align: center;
+
+  p {
+    margin-bottom: 20px;
+  }
+}
+
+.copyrights {
+  @extend %clearfix;
+  position: absolute;
+  bottom: 32 * $m;
+  left: 0;
+  right: 0;
+}
+
+.fz_14 {
+  font-size: 14 * $m;
+}
+
+.fz_16 {
+  font-size: 16 * $m;
+}
+
+.fz_18 {
+  font-size: 18 * $m;
+}
+
+.fz_20 {
+  font-size: 20 * $m;
+}
+
+.fz_21 {
+  font-size: 21 * $m;
+}
+
+.fz_24 {
+  font-size: 24 * $m;
+}
+
+.fz_28 {
+  font-size: 28 * $m;
+}
+
+.fz_30 {
+  font-size: 30 * $m;
+}
+
+.fz_48 {
+  font-size: 48 * $m;
+}
+
+.let-_03 {
+  letter-spacing: -.03em;
+}
+
+.let-_038 {
+  letter-spacing: -.038em;
+}
+
+.let-_045 {
+  letter-spacing: -.045em;
+}
+
+.let-_04 {
+  letter-spacing: -.04em;
+}
+
+.let-_05 {
+  letter-spacing: -.05em;
+}
+
+.let_015 {
+  letter-spacing: .015em;
+}
+
+.let_025 {
+  letter-spacing: .025em;
+}
+
+.lh_1 {
+  line-height: 1;
+}
+
+.lh_1_1 {
+  line-height: 1.1;
+}
+
+.mb_5 {
+  margin-bottom: 5 * $m;
+}
+
+.mb_10 {
+  margin-bottom: 10 * $m;
+}
+
+.mb_40 {
+  margin-bottom: 40 * $m;
+}
+
+.fw_med {
+  font-family: $AvenirNextCyrMedium;
+}
+
+.din_bold {
+  font-family: $DINAlternateBold;
+}

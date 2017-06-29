@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1240px" height="1240px" viewBox="0 0 1240 1240" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>arc</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="100%" x2="50%" y2="0%" id="linearGradient-1">
+            <stop stop-color="#1D7874" offset="0%"></stop>
+            <stop stop-color="#1D7874" offset="42.8989955%"></stop>
+            <stop stop-color="#1D7874" stop-opacity="0.515794837" offset="78.6192602%"></stop>
+            <stop stop-color="#1D7874" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="arc" fill-rule="nonzero" fill="url(#linearGradient-1)">
+            <path d="M0,620 C-4.50551705e-13,961.859815 278.131292,1240 620,1240 C961.868708,1240 1240,961.859815 1240,620 L1076.46146,620 C1076.46146,873.224812 873.196825,1076.49603 620,1076.49603 C366.803175,1076.49603 163.538541,873.224812 163.538541,620 L0,620 Z" id="Oval-4-Copy-5"></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="106px" height="301px" viewBox="0 0 106 301" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>arrow carrot up</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="100.148535%" y1="100%" x2="100%" y2="0%" id="linearGradient-1">
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0.0786911232" offset="18.7639509%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home-2" transform="translate(-1777.000000, -126.000000)" fill-rule="nonzero" fill="url(#linearGradient-1)">
+            <g id="arrow-carrot-up" transform="translate(1777.000000, 126.000000)">
+                <path d="M95.8572329,6.26115706 L77.4096022,8.02158528 C75.9568651,8.16021769 74.6819756,7.09045841 74.5662367,5.63571837 C74.4504978,4.18097834 75.5372374,2.88585253 76.9899745,2.74722013 L101.15011,0.441656583 C101.880204,0.371984912 102.566989,0.607119873 103.078343,1.04315872 C103.597146,1.47848663 103.947375,2.10654728 104.005541,2.8376474 L105.930368,27.0310932 C106.046106,28.4858333 104.959367,29.7809591 103.50663,29.9195915 C102.053893,30.0582239 100.779003,28.9884646 100.663264,27.5337246 L99.1513523,8.53026796 C39.8436692,95.059806 7.41848321,196.625383 4.82190721,300.932131 L0.823146018,300.832587 C3.43891294,195.754923 36.105952,93.4346692 95.8572329,6.26115706 L95.8572329,6.26115706 Z" id="Combined-Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>
