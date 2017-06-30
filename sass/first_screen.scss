@@ -531,7 +531,7 @@ $nav_height: 1238 * $m;
   vertical-align: top;
   border: 1px solid #fff;
   border-radius: 4 * $m;
-  padding: 15 * $m 110 * $m 15 * $m 97 * $m;
+  padding: 20 * $m 110 * $m 10 * $m 98 * $m;
   font-family: $DINAlternateBold;
   white-space: nowrap;
 }
@@ -600,12 +600,26 @@ $nav_height: 1238 * $m;
   color: #fff;
 
   span {
-    border-bottom: 1px solid transparent;
+    position: relative;
+
+    &:before {
+      @include transition_all(width .6s cubic-bezier(1, 0, 0, 1));
+      content: '';
+      position: absolute;
+      bottom: 0;
+      width: 0;
+      left: 0;
+      height: 1px;
+      background: #fff;
+    }
   }
 
   &:hover {
     span {
-      border-color: #fff;
+
+      &:before {
+        width: 100%;
+      }
     }
   }
 }

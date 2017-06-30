@@ -167,15 +167,14 @@
   color: #000;
 
   &:before {
-    @include transition_all(background .3s);
+    @include transition_all(width .6s cubic-bezier(1, 0, 0, 1));
     content: '';
     position: absolute;
     bottom: -5 * $m;
-    right: 0;
+    width: 0;
     left: 0;
     height: 4 * $m;
     background: #000;
-    opacity: 0;
   }
 
   &._no_hover {
@@ -186,7 +185,7 @@
   
   &:hover {
     &:before {
-      opacity: 1;
+      width: 100%;
     }
   }
 }

@@ -34,18 +34,18 @@ var big_chart = [
     "color": "#E75151",
     "dot_shadow": ".87 0 0 0 0  0 .18 0 0 0  0 0 0 .18 0  0 0 0 1 0",
     "data": [
-      {"date": "01-Jan-12", "close": 56000},
-      {"date": "01-Feb-12", "close": 56950},
-      {"date": "01-Mar-12", "close": 55300},
-      {"date": "01-Apr-12", "close": 55750},
-      {"date": "01-May-12", "close": 55000},
-      {"date": "01-Jun-12", "close": 56000},
-      {"date": "01-Jul-12", "close": 56950},
-      {"date": "01-Aug-12", "close": 55500},
-      {"date": "01-Sep-12", "close": 54800},
-      {"date": "01-Oct-12", "close": 55200},
-      {"date": "01-Nov-12", "close": 55855},
-      {"date": "01-Dec-12", "close": 56000}
+      {"date": "Sun Jan 1 2012 00:00:00 GMT+0000 (EET)", "close": 56000},
+      {"date": "Wed Feb 1 2012 00:00:00 GMT+0000 (EET)", "close": 56950},
+      {"date": "Thu Mar 1 2012 00:00:00 GMT+0000 (EET)", "close": 55300},
+      {"date": "Sun Apr 1 2012 00:00:00 GMT+0300 (EET)", "close": 55750},
+      {"date": "Tue May 1 2012 00:00:00 GMT+0300 (EET)", "close": 55000},
+      {"date": "Fri Jun 1 2012 00:00:00 GMT+0300 (EET)", "close": 56000},
+      {"date": "Sun Jul 1 2012 00:00:00 GMT+0300 (EET)", "close": 56950},
+      {"date": "Wed Aug 1 2012 00:00:00 GMT+0300 (EET)", "close": 55500},
+      {"date": "Sat Sep 1 2012 00:00:00 GMT+0300 (EET)", "close": 54800},
+      {"date": "Mon Oct 1 2012 00:00:00 GMT+0300 (EET)", "close": 55200},
+      {"date": "Thu Nov 1 2012 00:00:00 GMT+0000 (EET)", "close": 55855},
+      {"date": "Sat Dec 1 2012 00:00:00 GMT+0000 (EET)", "close": 56000}
     ]
   },
   {
@@ -53,18 +53,18 @@ var big_chart = [
     "color": "#2185D8",
     "dot_shadow": ".15 0 0 0 0  0 .51 0 0 0  0 0 0 .8  0  0 0 0 1 0",
     "data": [
-      {"date": "01-Jan-12", "close": 57500},
-      {"date": "01-Feb-12", "close": 58200},
-      {"date": "01-Mar-12", "close": 58350},
-      {"date": "01-Apr-12", "close": 57800},
-      {"date": "01-May-12", "close": 57500},
-      {"date": "01-Jun-12", "close": 57955},
-      {"date": "01-Jul-12", "close": 58255},
-      {"date": "01-Aug-12", "close": 58500},
-      {"date": "01-Sep-12", "close": 58010},
-      {"date": "01-Oct-12", "close": 57850},
-      {"date": "01-Nov-12", "close": 57700},
-      {"date": "01-Dec-12", "close": 58000}
+      {"date": "Sun Jan 1 2012 00:00:00 GMT+0000 (EET)", "close": 57500},
+      {"date": "Wed Feb 1 2012 00:00:00 GMT+0000 (EET)", "close": 58200},
+      {"date": "Thu Mar 1 2012 00:00:00 GMT+0000 (EET)", "close": 58350},
+      {"date": "Sun Apr 1 2012 00:00:00 GMT+0300 (EET)", "close": 57800},
+      {"date": "Tue May 1 2012 00:00:00 GMT+0300 (EET)", "close": 57500},
+      {"date": "Fri Jun 1 2012 00:00:00 GMT+0300 (EET)", "close": 57955},
+      {"date": "Sun Jul 1 2012 00:00:00 GMT+0300 (EET)", "close": 58255},
+      {"date": "Wed Aug 1 2012 00:00:00 GMT+0300 (EET)", "close": 58500},
+      {"date": "Sat Sep 1 2012 00:00:00 GMT+0300 (EET)", "close": 58010},
+      {"date": "Mon Oct 1 2012 00:00:00 GMT+0300 (EET)", "close": 57850},
+      {"date": "Thu Nov 1 2012 00:00:00 GMT+0000 (EET)", "close": 57700},
+      {"date": "Sat Dec 1 2012 00:00:00 GMT+0000 (EET)", "close": 58000}
     ]
   },
   {
@@ -72,18 +72,18 @@ var big_chart = [
     "color": "#37BFAB",
     "dot_shadow": ".22 0 0 0 0  0 .75 0 0 0  0 0 0 .67 0  0 0 0 1 0",
     "data": [
-      {"date": "01-Jan-12", "close": 60000},
-      {"date": "01-Feb-12", "close": 59500},
-      {"date": "01-Mar-12", "close": 59750},
-      {"date": "01-Apr-12", "close": 60400},
-      {"date": "01-May-12", "close": 61000},
-      {"date": "01-Jun-12", "close": 60250},
-      {"date": "01-Jul-12", "close": 60000},
-      {"date": "01-Aug-12", "close": 59240},
-      {"date": "01-Sep-12", "close": 59000},
-      {"date": "01-Oct-12", "close": 59450},
-      {"date": "01-Nov-12", "close": 60000},
-      {"date": "01-Dec-12", "close": 61000}
+      {"date": "Sun Jan 1 2012 00:00:00 GMT+0000 (EET)", "close": 60000},
+      {"date": "Wed Feb 1 2012 00:00:00 GMT+0000 (EET)", "close": 59500},
+      {"date": "Thu Mar 1 2012 00:00:00 GMT+0000 (EET)", "close": 59750},
+      {"date": "Sun Apr 1 2012 00:00:00 GMT+0300 (EET)", "close": 60400},
+      {"date": "Tue May 1 2012 00:00:00 GMT+0300 (EET)", "close": 61000},
+      {"date": "Fri Jun 1 2012 00:00:00 GMT+0300 (EET)", "close": 60250},
+      {"date": "Sun Jul 1 2012 00:00:00 GMT+0300 (EET)", "close": 60000},
+      {"date": "Wed Aug 1 2012 00:00:00 GMT+0300 (EET)", "close": 59240},
+      {"date": "Sat Sep 1 2012 00:00:00 GMT+0300 (EET)", "close": 59000},
+      {"date": "Mon Oct 1 2012 00:00:00 GMT+0300 (EET)", "close": 59450},
+      {"date": "Thu Nov 1 2012 00:00:00 GMT+0000 (EET)", "close": 60000},
+      {"date": "Sat Dec 1 2012 00:00:00 GMT+0000 (EET)", "close": 61000}
     ]
   },
   {
@@ -91,18 +91,18 @@ var big_chart = [
     "color": "#C46565",
     "dot_shadow": ".77 0 0 0 0  0 .4  0 0 0  0 0 0 .4  0  0 0 0 1 0",
     "data": [
-      {"date": "01-Jan-12", "close": 63000},
-      {"date": "01-Feb-12", "close": 60500},
-      {"date": "01-Mar-12", "close": 62750},
-      {"date": "01-Apr-12", "close": 64400},
-      {"date": "01-May-12", "close": 63000},
-      {"date": "01-Jun-12", "close": 62250},
-      {"date": "01-Jul-12", "close": 64000},
-      {"date": "01-Aug-12", "close": 63500},
-      {"date": "01-Sep-12", "close": 65000},
-      {"date": "01-Oct-12", "close": 64500},
-      {"date": "01-Nov-12", "close": 64400},
-      {"date": "01-Dec-12", "close": 65000}
+      {"date": "Sun Jan 1 2012 00:00:00 GMT+0000 (EET)", "close": 63000},
+      {"date": "Wed Feb 1 2012 00:00:00 GMT+0000 (EET)", "close": 60500},
+      {"date": "Thu Mar 1 2012 00:00:00 GMT+0000 (EET)", "close": 62750},
+      {"date": "Sun Apr 1 2012 00:00:00 GMT+0300 (EET)", "close": 64400},
+      {"date": "Tue May 1 2012 00:00:00 GMT+0300 (EET)", "close": 63000},
+      {"date": "Fri Jun 1 2012 00:00:00 GMT+0300 (EET)", "close": 62250},
+      {"date": "Sun Jul 1 2012 00:00:00 GMT+0300 (EET)", "close": 64000},
+      {"date": "Wed Aug 1 2012 00:00:00 GMT+0300 (EET)", "close": 63500},
+      {"date": "Sat Sep 1 2012 00:00:00 GMT+0300 (EET)", "close": 65000},
+      {"date": "Mon Oct 1 2012 00:00:00 GMT+0300 (EET)", "close": 64500},
+      {"date": "Thu Nov 1 2012 00:00:00 GMT+0000 (EET)", "close": 64400},
+      {"date": "Sat Dec 1 2012 00:00:00 GMT+0000 (EET)", "close": 65000}
     ]
   }
 ];
@@ -113,18 +113,18 @@ var prices = [
     color: "#E75151",
     dot_shadow: ".87 0 0 0 0  0 .18 0 0 0  0 0 0 .18 0  0 0 0 1 0",
     data: [
-      {"date": "01-Jan-12", "close": 4236},
-      {"date": "01-Feb-12", "close": 3221},
-      {"date": "01-Mar-12", "close": 2221},
-      {"date": "01-Apr-12", "close": 2313},
-      {"date": "01-May-12", "close": 1313},
-      {"date": "01-Jun-12", "close": 3264},
-      {"date": "01-Jul-12", "close": 2229},
-      {"date": "01-Aug-12", "close": 3818},
-      {"date": "01-Sep-12", "close": 2229},
-      {"date": "01-Oct-12", "close": 3818},
-      {"date": "01-Nov-12", "close": 4236},
-      {"date": "01-Dec-12", "close": 1236}
+      {"date": "Sun Jan 1 2012 00:00:00 GMT+0000 (EET)", "close": 4236},
+      {"date": "Wed Feb 1 2012 00:00:00 GMT+0000 (EET)", "close": 3221},
+      {"date": "Thu Mar 1 2012 00:00:00 GMT+0000 (EET)", "close": 2221},
+      {"date": "Sun Apr 1 2012 00:00:00 GMT+0300 (EET)", "close": 2313},
+      {"date": "Tue May 1 2012 00:00:00 GMT+0300 (EET)", "close": 1313},
+      {"date": "Fri Jun 1 2012 00:00:00 GMT+0300 (EET)", "close": 3264},
+      {"date": "Sun Jul 1 2012 00:00:00 GMT+0300 (EET)", "close": 2229},
+      {"date": "Wed Aug 1 2012 00:00:00 GMT+0300 (EET)", "close": 3818},
+      {"date": "Sat Sep 1 2012 00:00:00 GMT+0300 (EET)", "close": 2229},
+      {"date": "Mon Oct 1 2012 00:00:00 GMT+0300 (EET)", "close": 3818},
+      {"date": "Thu Nov 1 2012 00:00:00 GMT+0000 (EET)", "close": 4236},
+      {"date": "Sat Dec 1 2012 00:00:00 GMT+0000 (EET)", "close": 1236}
     ]
   },
   {
@@ -132,18 +132,18 @@ var prices = [
     color: "#2185D8",
     dot_shadow: ".15 0 0 0 0  0 .51 0 0 0  0 0 0 .8  0  0 0 0 1 0",
     data: [
-      {"date": "01-Jan-12", "close": 4236},
-      {"date": "01-Feb-12", "close": 3221},
-      {"date": "01-Mar-12", "close": 2221},
-      {"date": "01-Apr-12", "close": 2313},
-      {"date": "01-May-12", "close": 1313},
-      {"date": "01-Jun-12", "close": 3264},
-      {"date": "01-Jul-12", "close": 2229},
-      {"date": "01-Aug-12", "close": 3818},
-      {"date": "01-Sep-12", "close": 2229},
-      {"date": "01-Oct-12", "close": 3818},
-      {"date": "01-Nov-12", "close": 4236},
-      {"date": "01-Dec-12", "close": 1236}
+      {"date": "Sun Jan 1 2012 00:00:00 GMT+0000 (EET)", "close": 4236},
+      {"date": "Wed Feb 1 2012 00:00:00 GMT+0000 (EET)", "close": 3221},
+      {"date": "Thu Mar 1 2012 00:00:00 GMT+0000 (EET)", "close": 2221},
+      {"date": "Sun Apr 1 2012 00:00:00 GMT+0300 (EET)", "close": 2313},
+      {"date": "Tue May 1 2012 00:00:00 GMT+0300 (EET)", "close": 1313},
+      {"date": "Fri Jun 1 2012 00:00:00 GMT+0300 (EET)", "close": 3264},
+      {"date": "Sun Jul 1 2012 00:00:00 GMT+0300 (EET)", "close": 2229},
+      {"date": "Wed Aug 1 2012 00:00:00 GMT+0300 (EET)", "close": 3818},
+      {"date": "Sat Sep 1 2012 00:00:00 GMT+0300 (EET)", "close": 2229},
+      {"date": "Mon Oct 1 2012 00:00:00 GMT+0300 (EET)", "close": 3818},
+      {"date": "Thu Nov 1 2012 00:00:00 GMT+0000 (EET)", "close": 4236},
+      {"date": "Sat Dec 1 2012 00:00:00 GMT+0000 (EET)", "close": 1236}
     ]
   },
   {
@@ -151,18 +151,18 @@ var prices = [
     color: "#37BFAB",
     dot_shadow: ".22 0 0 0 0  0 .75 0 0 0  0 0 0 .67 0  0 0 0 1 0",
     data: [
-      {"date": "01-Jan-12", "close": 4236},
-      {"date": "01-Feb-12", "close": 3221},
-      {"date": "01-Mar-12", "close": 2221},
-      {"date": "01-Apr-12", "close": 2313},
-      {"date": "01-May-12", "close": 1313},
-      {"date": "01-Jun-12", "close": 3264},
-      {"date": "01-Jul-12", "close": 2229},
-      {"date": "01-Aug-12", "close": 3818},
-      {"date": "01-Sep-12", "close": 2229},
-      {"date": "01-Oct-12", "close": 3818},
-      {"date": "01-Nov-12", "close": 4236},
-      {"date": "01-Dec-12", "close": 1236}
+      {"date": "Sun Jan 1 2012 00:00:00 GMT+0000 (EET)", "close": 4236},
+      {"date": "Wed Feb 1 2012 00:00:00 GMT+0000 (EET)", "close": 3221},
+      {"date": "Thu Mar 1 2012 00:00:00 GMT+0000 (EET)", "close": 2221},
+      {"date": "Sun Apr 1 2012 00:00:00 GMT+0300 (EET)", "close": 2313},
+      {"date": "Tue May 1 2012 00:00:00 GMT+0300 (EET)", "close": 1313},
+      {"date": "Fri Jun 1 2012 00:00:00 GMT+0300 (EET)", "close": 3264},
+      {"date": "Sun Jul 1 2012 00:00:00 GMT+0300 (EET)", "close": 2229},
+      {"date": "Wed Aug 1 2012 00:00:00 GMT+0300 (EET)", "close": 3818},
+      {"date": "Sat Sep 1 2012 00:00:00 GMT+0300 (EET)", "close": 2229},
+      {"date": "Mon Oct 1 2012 00:00:00 GMT+0300 (EET)", "close": 3818},
+      {"date": "Thu Nov 1 2012 00:00:00 GMT+0000 (EET)", "close": 4236},
+      {"date": "Sat Dec 1 2012 00:00:00 GMT+0000 (EET)", "close": 1236}
     ]
   },
   {
@@ -170,18 +170,18 @@ var prices = [
     color: "#C46565",
     dot_shadow: ".77 0 0 0 0  0 .4  0 0 0  0 0 0 .4  0  0 0 0 1 0",
     data: [
-      {"date": "01-Jan-12", "close": 4236},
-      {"date": "01-Feb-12", "close": 3221},
-      {"date": "01-Mar-12", "close": 2221},
-      {"date": "01-Apr-12", "close": 2313},
-      {"date": "01-May-12", "close": 1313},
-      {"date": "01-Jun-12", "close": 3264},
-      {"date": "01-Jul-12", "close": 2229},
-      {"date": "01-Aug-12", "close": 3818},
-      {"date": "01-Sep-12", "close": 2229},
-      {"date": "01-Oct-12", "close": 3818},
-      {"date": "01-Nov-12", "close": 4236},
-      {"date": "01-Dec-12", "close": 1236}
+      {"date": "Sun Jan 1 2012 00:00:00 GMT+0000 (EET)", "close": 4236},
+      {"date": "Wed Feb 1 2012 00:00:00 GMT+0000 (EET)", "close": 3221},
+      {"date": "Thu Mar 1 2012 00:00:00 GMT+0000 (EET)", "close": 2221},
+      {"date": "Sun Apr 1 2012 00:00:00 GMT+0300 (EET)", "close": 2313},
+      {"date": "Tue May 1 2012 00:00:00 GMT+0300 (EET)", "close": 1313},
+      {"date": "Fri Jun 1 2012 00:00:00 GMT+0300 (EET)", "close": 3264},
+      {"date": "Sun Jul 1 2012 00:00:00 GMT+0300 (EET)", "close": 2229},
+      {"date": "Wed Aug 1 2012 00:00:00 GMT+0300 (EET)", "close": 3818},
+      {"date": "Sat Sep 1 2012 00:00:00 GMT+0300 (EET)", "close": 2229},
+      {"date": "Mon Oct 1 2012 00:00:00 GMT+0300 (EET)", "close": 3818},
+      {"date": "Thu Nov 1 2012 00:00:00 GMT+0000 (EET)", "close": 4236},
+      {"date": "Sat Dec 1 2012 00:00:00 GMT+0000 (EET)", "close": 1236}
     ]
   }
 
@@ -252,11 +252,11 @@ var pageSliderDensity = 30,
     },
     afterLoad: function (anchorLink, index) {
       var section = $('.pageSlider .slide_section').eq(index - 1),
-        animationClass = sliderDirection == 'down' ? 'fadeInUpBig' : 'fadeInDownBig';
+        animationClass = sliderDirection == 'down' ? 'fadeInUp' : 'fadeInDown';
 
       //console.log(anchorLink, index);
 
-      //$('.fadeMeUp').removeClass('fadeInUpBig animated fadeInDownBig');
+      //$('.fadeMeUp').removeClass('fadeInUp animated fadeInDown');
       //$('.fadeMeIn').removeClass('fadeIn animated');
 
       section.find('.fadeMeUp').each(function (ind) {
@@ -275,7 +275,7 @@ var pageSliderDensity = 30,
         }, delay);
       });
 
-      updateSlider(anchorLink, index);
+      //updateSlider(anchorLink, index);
 
     },
     afterRender: function () {
@@ -285,6 +285,8 @@ var pageSliderDensity = 30,
         //init_area_family_chart($(this), prices);
         init_area_family_chart($(this), big_chart);
       });
+
+      updateSlider('', $('.fp-section.active').index() + 1);
 
       windowRisize();
 
@@ -367,8 +369,7 @@ $(function ($) {
 
       var sections = $('.fp-section');
 
-      console.log(sections.filter('.active').index(), sections.filter('.product_section').first().index());
-
+      //console.log(sections.filter('.active').index(), sections.filter('.product_section').first().index());
 
       if (sections.filter('.active').index() < sections.filter('.product_section').first().index()) {
         setTimeout(function () {
@@ -414,7 +415,13 @@ function updateSlider(el, ind) {
     nav_label.css({'width': nav_label.attr('data-width'), 'height': nav_label.attr('data-height')});
   }
 
-  $('.asideNavLabel').html(nav_label);
+  $('.asideNavLabel').fadeOut(500, function () {
+    $('.asideNavLabel').html(nav_label);
+
+    setTimeout(function () {
+      $('.asideNavLabel').fadeIn(500);
+    }, 50);
+  });
 
   //$('.prevSlide').toggle(!(ind == 1));
 
@@ -563,7 +570,8 @@ function init_area_family_chart(el, data_files) {
     //  .attr('mode', 'normal');
 
     data.forEach(function (d) {
-      d.date = parseDate(d.date);
+      //console.log(d, d.date, parseDate(d.date));
+      d.date = new Date(d.date);
       d.close = +d.close;
     });
 
