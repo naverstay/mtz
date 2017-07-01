@@ -1,0 +1,60 @@
+extends _layout.pug
+include _mixins.pug
+
+block variables
+  - var $m = 0.0714286666666667;
+  - var page_title = 'MTZ доставка';
+  - var html_class = '';
+  - var body_class = 'header_white_blue header_fixed';
+  - var has_footer = true;
+  - var nav_active = 3;
+  - var dropdown_active = 0;
+  - var script_set = 3;
+  - var menu_open_dt = true;
+
+block content
+  .delivery_section
+    .section_inner.clearfix
+      .delivery_map
+        .delivery_info
+          .section_caption.mb_20
+            span.fz_48.let-_025 Москва и московская область
+    
+          p
+            span.fz_14.let_015 Наша компания доставит Ваш заказ по Москве и области собственным автотранпортом в кратчайшие сроки. Стоимоть и дату доставки вы можете узнать у наших менеджеров.
+            
+          .section_caption.mb_20
+            span.fz_48.let-_025 Регионы
+    
+          p
+            span.fz_14.let_015 Мы сотрудничаем с ведущими грузоперевозчиками. Наш менеджер сам свяжется с оператором доставки, согласует все детали и выставит вам счет без каких-либо наценок.
+            
+          .section_caption.mb_20
+            span.fz_48.let-_025 Самовывоз
+    
+          p
+            span.fz_14.let_015 Приобретенную продукцию завода наши клиенты также могут забрать самостоятельно. В этом случае для совершения отгрузки со склада необходимо будет предоставить документы, подтверждающие право на это лиц, осуществляющих вывоз
+          
+        .map_holder.mapHolder
+          +svg_map()
+
+      .delivery_calc
+        .delivery_calc_caption 
+          span.fz_24 Расчитать стоимость доставки
+        p 
+          span.fz_18 Оставьте ваши данные, наш менеджер перезвонит вам и&nbsp;проконсультирует по стоимости и срокам доставки.
+        
+        form(action='#')
+          .form_cell.form_cell_v1
+            input.f_input_v1.f_input(placeholder='Ваше имя')
+            
+          .form_cell.form_cell_v1
+            input.f_input_v1.f_input(placeholder='Телефон')
+            
+          .form_cell.form_cell_v2
+            textarea.f_input_v1.f_input(placeholder='Комменарий (опционально)')
+            
+          .form_cell.form_cell_v1
+            button.btn_red.btn_v2.calc_btn
+              span.fz_20 Отправить
+        

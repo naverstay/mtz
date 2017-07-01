@@ -5,12 +5,22 @@
   top: 0;
   right: 0;
   left: 0;
-  line-height: 88px;
+  line-height: 88 * $m;
   z-index: 5;
 
   .section_inner {
-    padding: 0 70px;
+    padding: 0 70 * $m;
   }
+  
+  .header_fixed & {
+    position: fixed;
+    border-bottom: 1px solid #d8d8d8;
+  }
+  
+  .header_white_blue & {
+    background: #fff;
+  }
+  
 }
 
 .logo_block {
@@ -30,13 +40,32 @@
   width: 70 * $m;
 
   svg {
+    //@include transition_all(fill .3s, stroke .3s);
     height: 100%;
     width: 100%;
 
     * {
-      //@include transition_all(fill .3s, stroke .3s);
+      @include transition_all(fill .6s cubic-bezier(0.4, 0, 0.2, 1), stroke .6s cubic-bezier(0.4, 0, 0.2, 1));
     }
   }
+  
+  .footer_logo & {
+    svg {
+      #Group {
+        fill: #fff;
+      }
+
+      #Group-2 {
+        fill: #000;
+        stroke: #000;
+      }
+
+      #Group-3 {
+        fill: #fff;
+      }
+    }
+  }
+  
 }
 
 .callback_block {
@@ -47,7 +76,7 @@
   //$fz: 18;
 
   @extend %icon_pseudo;
-  @include transition_all(background .3s, color .3s);
+  @include transition_all(background .6s cubic-bezier(1, 0, 0, 1), color .6s cubic-bezier(1, 0, 0, 1));
   position: relative;
   display: inline-block;
   vertical-align: middle;
@@ -76,6 +105,7 @@
 
   .swap_text,
   &:before {
+    @include transition_all(transform .6s cubic-bezier(1, 0, 0, 1), background .6s cubic-bezier(1, 0, 0, 1));
     position: absolute;
     right: 0;
     top: 0;
@@ -95,7 +125,6 @@
   }
 
   .swap_text {
-    @include transition_all(transform .3s, backgriund .3s);
     @include transform_translate(100%, 0);
     z-index: 2;
     width: 100%;
@@ -157,6 +186,7 @@
 }
 
 .menu_link {
+  @include transition_all(color .3s);
   cursor: pointer;
   position: relative;
   display: inline-block;
@@ -167,7 +197,7 @@
   color: #000;
 
   &:before {
-    @include transition_all(width .6s cubic-bezier(1, 0, 0, 1));
+    @include transition_all(width .6s cubic-bezier(1, 0, 0, 1), background .3s cubic-bezier(1, 0, 0, 1));
     content: '';
     position: absolute;
     bottom: -5 * $m;
@@ -182,7 +212,12 @@
       display: none;
     }
   }
-  
+
+  &._active {
+    cursor: default;
+  }
+
+  &._active,
   &:hover {
     &:before {
       width: 100%;
@@ -211,10 +246,48 @@
 
     .menu_link {
       color: #fff;
-      
+
       &:before {
         background: #fff;
       }
     }
+  }
+}
+
+.header_white_blue {
+  .header {
+    .logo {
+      svg {
+        #Group {
+          fill: #2274a5;
+        }
+
+        #Group-2 {
+          fill: #fff;
+          stroke: #fff;
+        }
+
+        #Group-3 {
+          fill: #2274a5;
+        }
+      }
+    }
+
+    .menu_link {
+      color: #000;
+
+      &:before {
+        background: #000;
+      }
+
+      &._active {
+        color: #2274a5;
+
+        &:before {
+          background: #2274a5;
+        }
+      }
+    }
+
   }
 }

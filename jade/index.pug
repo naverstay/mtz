@@ -5,10 +5,11 @@ block variables
   - var $m = 0.0714286666666667;
   - var page_title = 'MTZ главная';
   - var html_class = 'home_page';
-  - var body_class = 'logo_white header_white';
+  - var body_class = 'header_white';
   - var has_footer = false;
   - var nav_active = 0;
   - var dropdown_active = 0;
+  - var script_set = 1;
   - var menu_open_dt = true;
 
 block content
@@ -278,14 +279,14 @@ block content
                   li: a.nav_link(href='#'): span.fz_18 Трубы электросварные
                   li: a.nav_link(href='#'): span.fz_18 Отводы сварные секторные
                   li: a.nav_link(href='#'): span.fz_18 Тройники сварные
-            
+      
               li.fadeMeUp(style='opacity: 0;' data-fade-delay=400)
                 ul.nav_links.din_bold
                   li: a.nav_link(href='#'): span.fz_30 Производство
                   li: a.nav_link(href='#'): span.fz_30 Доставка
                   li: a.nav_link(href='#'): span.fz_30 О комапнии
                   li: a.nav_link(href='#'): span.fz_30 Контакты
-            
+      
               li.contacts_col.fadeMeUp(style='opacity: 0;' data-fade-delay=800)
                 ul.contacts_info
                   li
@@ -294,14 +295,14 @@ block content
                     .dm
                       p: span.fz_16 +7 (495) 724-10-31
                       p: span.fz_16 +7 (495) 724-60-31
-                  
+      
                   li
                     .contact_icon
                       span.i-envelope.fz_28
                     .dm
                       p
                         a.nav_link(href='mailto:info@mtzavod.ru'): span.fz_16 info@mtzavod.ru
-                  
+      
                   li
                     .contact_icon
                       span.i-pin.fz_30
@@ -318,11 +319,11 @@ block content
                         span.fz_16 Режим работы:
                       p
                         span.fz_16 Пн-Пт с 9:00 до 18:00
-
+      
       .copyrights.fadeMeIn(style='opacity: 0;' data-fade-delay=1600)
         .section_inner
-          .fl 
+          .fl
             span © 2008-2017 ООО "Мытищинский трубный завод", производство и продажа электросварных труб
-            
+      
           .fr
             span Разработано в Yoldi.ru

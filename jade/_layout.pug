@@ -6,7 +6,7 @@ doctype html
 html(lang='ru' class= html_class || '')
   +dev_head(page_title || '')
 
-  body(class= body_class || '')
+  body(class= (body_class || '') + (has_footer ? ' has_footer' : ''))
     .wrapper
       .base
         +header()
@@ -17,4 +17,4 @@ html(lang='ru' class= html_class || '')
       +footer()
       +popups(true)
 
-    +scripts(true)
+    +scripts(script_set)

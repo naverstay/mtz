@@ -394,7 +394,7 @@ $(function ($) {
     d3.selectAll('.mapHolder .region_shadow').filter(function () {
       return d3.select(this).attr('data-shadow') == reg.attr('id');
     }).style("opacity", 0);
-  })
+  });
 
 });
 
@@ -415,11 +415,11 @@ function updateSlider(el, ind) {
     nav_label.css({'width': nav_label.attr('data-width'), 'height': nav_label.attr('data-height')});
   }
 
-  $('.asideNavLabel').fadeOut(500, function () {
+  $('.asideNavLabel').fadeOut(300, function () {
     $('.asideNavLabel').html(nav_label);
 
     setTimeout(function () {
-      $('.asideNavLabel').fadeIn(500);
+      $('.asideNavLabel').fadeIn(300);
     }, 50);
   });
 

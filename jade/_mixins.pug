@@ -19,10 +19,10 @@ mixin loop_while(counter)
     block
 
 mixin header()
-  #header.header
+  .header
     .section_inner
       .logo_block
-        a.logo(href='#')
+        a.logo(href='index.html')
           +logo_img()
 
       .callback_block
@@ -33,36 +33,107 @@ mixin header()
     
       .menu_holder
         ul.main_menu
-          li: a.menu_link(href='#'): span.fz_18 Продукция
-          li: a.menu_link(href='#'): span.fz_18 Производство
-          li: a.menu_link(href='#'): span.fz_18 Доставка
-          li: a.menu_link(href='#'): span.fz_18 О комапнии
-          li: a.menu_link(href='#'): span.fz_18 Контакты
+          li: a.menu_link(class= (nav_active == 1 ? '_active' : '') href='production.html'): span.fz_18 Продукция
+          li: a.menu_link(class= (nav_active == 2 ? '_active' : '') href='manufacture.html'): span.fz_18 Производство
+          li: a.menu_link(class= (nav_active == 3 ? '_active' : '') href='delivery.html'): span.fz_18 Доставка
+          li: a.menu_link(class= (nav_active == 4 ? '_active' : '') href='about.html'): span.fz_18 О комапнии
+          li: a.menu_link(class= (nav_active == 5 ? '_active' : '') href='contacts.html'): span.fz_18 Контакты
           li
             a.menu_link._no_hover(href='#')
               span.i-search.fz_24
 
 mixin footer()
   - if (has_footer)
-    #footer.footer
+    .footer
       .section_inner
+        ul.contacts_list
+          li
+            .footer_logo
+              a.logo(href='index.html')
+                +logo_img()
+              
+              .footer_slogan Всегда низкие цены. Производим <br> трубы больших диаметров.
+              
+          li
+            ul.nav_links
+              li: a.nav_link.din_bold(href='#'): span.fz_30 Продукция
+              li: a.nav_link(href='#'): span.fz_18 Трубы бесшовные
+              li: a.nav_link(href='#'): span.fz_18 Трубы электросварные
+              li: a.nav_link(href='#'): span.fz_18 Отводы сварные секторные
+              li: a.nav_link(href='#'): span.fz_18 Тройники сварные
+
+          li
+            ul.nav_links.din_bold
+              li: a.nav_link(href='#'): span.fz_30 Производство
+              li: a.nav_link(href='#'): span.fz_30 Доставка
+              li: a.nav_link(href='#'): span.fz_30 О комапнии
+              li: a.nav_link(href='#'): span.fz_30 Контакты
+
+          li.contacts_col
+            ul.contacts_info
+              li
+                .contact_icon
+                  span.i-phone.fz_28
+                .dm
+                  p: span.fz_16 +7 (495) 724-10-31
+                  p: span.fz_16 +7 (495) 724-60-31
+
+              li
+                .contact_icon
+                  span.i-envelope.fz_28
+                .dm
+                  p
+                    a.nav_link(href='mailto:info@mtzavod.ru'): span.fz_16 info@mtzavod.ru
+
+              li
+                .contact_icon
+                  span.i-pin.fz_30
+                .dm
+                  p
+                    span.fz_16 144006, Московская обл.,
+                  p
+                    span.fz_16 г. Электросталь, ул. Красная, д. 11
+              li
+                .contact_icon
+                  span.i-clock.fz_28
+                .dm
+                  p
+                    span.fz_16 Режим работы:
+                  p
+                    span.fz_16 Пн-Пт с 9:00 до 18:00
+
+        .copyrights
+          .fl
+            span © 2017 ООО "Мытищинский трубный завод"
+
+          .fr
+            span Разработано в&nbsp;
+            a.dev_link(href='#') Yoldi.ru
+
 
 mixin popups(index)
   .popup
     
-mixin scripts(index, contacts)
+mixin scripts(script_set)
   script(src='js/jquery1.10.js')
   script(src='js/main.js')
 
-  - if (index)
+  - if (script_set == 1)
     script(src='js/jquery.fullPage.js')
     script(src='js/moment.min.js')
     script(src='js/d3.min.js')
-    script(src='js/d3.min.js')
     script(src='js/index.js')
 
-  - if (contacts)
-    script(src='https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true')
+  - if (script_set == 2)
+    script(src='js/contacts.js')
+
+  - if (script_set == 3)
+    script(src='js/d3.min.js')
+    script(src='js/delivery.js')
+    
+  - if (script_set == 5)
+    //script(src='https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true')
+    script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCl7THpWflv0u70jhfuU4T6KbuNy0fuxME&callback=loadMap')
     script(src='js/contacts.js')
 
 mixin svg_map()

@@ -16,8 +16,12 @@ body {
   font-family: $AvenirNextCyrRegular;
   font-size: 1.4em;
   line-height: 1.2;
-  background: #000;
+  background: #fff;
   color: $default_t_color;
+
+  .home_page & {
+    background: #000;
+  }
 }
 
 .hide {
@@ -50,6 +54,10 @@ body {
 .wrapper {
   position: relative;
   min-height: 100%;
+
+  .header_fixed & {
+    padding-top: 88 * $m;
+  }
 }
 
 .bg_video {
@@ -198,6 +206,10 @@ $nav_height: 1238 * $m;
   .header_white & {
     color: #fff;
   }
+
+  .fz_20 {
+    line-height: 1.1;
+  }
 }
 
 .nav_tip_label {
@@ -277,6 +289,10 @@ $nav_height: 1238 * $m;
 }
 
 .base {
+
+  .has_footer & {
+    padding-bottom: 460 * $m;
+  }
 }
 
 .slide_section {
@@ -304,7 +320,7 @@ $nav_height: 1238 * $m;
 .section_inner {
   @extend %clearfix;
   width: 100%;
-  padding: 0 15px;
+  padding: 0 15 * $m;
   margin: 0 auto;
 
   &.mod_1 {
@@ -451,8 +467,8 @@ $nav_height: 1238 * $m;
     position: absolute;
     left: 16 * $m;
     top: 0;
-    width: 14px;
-    height: 14px;
+    width: 14 * $m;
+    height: 14 * $m;
     border-radius: 100%;
   }
 }
@@ -531,7 +547,7 @@ $nav_height: 1238 * $m;
   vertical-align: top;
   border: 1px solid #fff;
   border-radius: 4 * $m;
-  padding: 20 * $m 110 * $m 10 * $m 98 * $m;
+  padding: 20 * $m 98 * $m 10 * $m 98 * $m;
   font-family: $DINAlternateBold;
   white-space: nowrap;
 }

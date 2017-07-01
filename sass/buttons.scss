@@ -66,6 +66,20 @@
   }
 }
 
+.btn_v2 {
+  height: 64 * $m;
+
+  &.calc_btn {
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 4 * $m;
+    font: 1em/1.2 $DINAlternateBold;
+    padding: 23 * $m 76 * $m 15 * $m;
+    letter-spacing: -.05em;
+  }
+
+}
+
 .btn_icon {
   @include transition_all(color .3s);
   position: absolute;
@@ -86,7 +100,7 @@
       position: relative;
       display: block;
     }
-    
+
     &:after {
       @include transition_all(transform .75s cubic-bezier(.23, 1, .32, 1) .4s);
       position: absolute;
@@ -203,8 +217,18 @@
 }
 
 .btn_red {
+  @include transition_all(background .3s);
   color: #fff;
-  background: #f46b65;
+  background: #e75151;
+
+  &:hover {
+    background: #cf4848;
+  }
+
+  &:active {
+    background: #b94141;
+  }
+
 }
 
 .yellow_btn {
