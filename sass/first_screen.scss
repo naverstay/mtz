@@ -689,6 +689,43 @@ $nav_height: 1238 * $m;
   font-family: $DINAlternateBold;
 }
 
+.gl_link {
+  position: relative;
+  text-decoration: none;
+
+  &:before {
+    @include transition_all(width .6s cubic-bezier(1, 0, 0, 1), background .3s cubic-bezier(1, 0, 0, 1));
+    content: '';
+    position: absolute;
+    bottom: -1 * $m;
+    width: 0;
+    left: 0;
+    height: $m;
+  }
+
+  &:hover {
+    &:before {
+      width: 100%;
+    }
+  }
+
+  &._black {
+    color: #000;
+
+    &:before {
+      background: #000;
+    }
+  }
+  
+  &._white {
+    color: #fff;
+
+    &:before {
+      background: #fff;
+    }
+  }
+}
+
 .text_center {
   text-align: center;
 }

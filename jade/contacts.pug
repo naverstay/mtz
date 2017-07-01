@@ -1,0 +1,62 @@
+extends _layout.pug
+include _mixins.pug
+
+block variables
+  - var $m = 0.0714286666666667;
+  - var page_title = 'MTZ контакты';
+  - var html_class = '';
+  - var body_class = 'header_white_blue header_fixed';
+  - var has_footer = true;
+  - var nav_active = 5;
+  - var dropdown_active = 0;
+  - var script_set = 5;
+  - var menu_open_dt = true;
+
+block content
+  .contacts_section
+    .section_inner.clearfix
+      .contacts_form
+        .delivery_calc_caption 
+          span.fz_18 Контакты
+        
+        dl.contacts_defs
+          dt
+            span.fz_16 Пн-Пт с 9:00 до 18:00
+          dd
+            span.fz_14 Режим работы
+            
+          dt
+            span.fz_16 +7 (495) 724-10-31, +7 (495) 724-60-31
+          dd
+            span.fz_14 Контактные телефоны
+            
+          dt
+            a.fz_16.gl_link._black(href='mailto:info@mtzavod.ru') info@mtzavod.ru
+          dd
+            span.fz_14 E-mail
+            
+          dt
+            span.fz_16 144006, Московская обл., г. Электросталь, ул. Красная, д. 11
+          dd
+            span.fz_14 Адрес
+            
+        .delivery_calc_caption
+          span.fz_18 Написать нам
+          
+        form(action='#')
+          .form_cell.form_cell_v1
+            input.f_input_v1.f_input(placeholder='Ваше имя')
+            
+          .form_cell.form_cell_v1
+            input.f_input_v1.f_input(placeholder='Телефон')
+            
+          .form_cell.form_cell_v2
+            textarea.f_input_v1.f_input(placeholder='Комменарий (опционально)')
+            
+          .form_cell.form_cell_v1
+            button.btn_red.btn_v2.calc_btn
+              span.fz_20 Отправить
+      
+      .contacts_map
+        #mtzMap.map_block
+            

@@ -19,14 +19,14 @@
     width: 59.6%;
     position: relative;
     z-index: 1;
-    padding-bottom: 85 * $m;
+    padding-bottom: 105 * $m;
   }
 
   .map_holder {
     @extend %hor_vert_centr;
     position: absolute;
-    top: 46%;
-    left: 51.5%;
+    top: 39.5%;
+    left: 51%;
     max-width: 100%;
   }
 
@@ -57,13 +57,56 @@
   p {
     font-family: $AvenirNextCyrMedium;
     line-height: 1.4;
-    letter-spacing: .01em;
     margin-bottom: 33 * $m;
   }
 }
 
 .delivery_calc_caption {
   font-family: $DINAlternateBold;
-  margin-bottom: 14 * $m;
-  letter-spacing: -.045em;
+  margin-bottom: 10 * $m;
+  letter-spacing: -.05em;
+}
+
+.contacts_section {
+  @extend %clearfix;
+  position: relative;
+}
+
+.contacts_form {
+  width: 40.1%;
+  float: left;
+  padding: 42 * $m 56 * $m;
+}
+
+.contacts_map {
+  width: 59.9%;
+  float: right;
+  height: 850 * $m;
+  margin-right: -15 * $m;
+  position: relative;
+  background: #fafafa;
+}
+
+.map_block {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.contacts_defs {
+  font-family: $AvenirNextCyrMedium;
+  padding: 5 * $m 0 25 * $m;
+  
+  dt {
+    display: block;
+    margin-bottom: 5 * $m;
+  }
+
+  dd {
+    display: block;
+    opacity: .5;
+    margin-bottom: 25 * $m;
+  }
 }

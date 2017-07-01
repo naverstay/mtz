@@ -50,9 +50,9 @@ function resizeMe(displayHeight, displayWidth) {
     var percentage = Math.min(heightPercentage, widthPercentage);
     var newFontSize = percentage.toFixed(2);
 
-    body_var.css('font-size', (newFontSize * baseFZ) + 'em');
+    //body_var.css('font-size', (newFontSize * baseFZ) + 'em');
   } else {
-    body_var.css('font-size', baseFZ + 'em');
+    //body_var.css('font-size', baseFZ + 'em');
   }
 }
 
