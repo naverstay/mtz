@@ -1,8 +1,51 @@
+.inp_hidden {
+  display: none;
+}
+
+.input_w {
+  position: relative;
+}
+
+.form_tip {
+  opacity: .5;
+  line-height: 1.4;
+  padding-top: 8 * $m;
+}
+
 .form_cell {
   position: relative;
 
   &.form_cell_v1 {
+    @extend %icon_pseudo;
     margin-bottom: 16 * $m;
+
+    &:before {
+      @include transition_all(opacity .3s);
+      will-change: opacity;
+      content: '';
+      position: absolute;
+      opacity: 0;
+      top: 16/1.14286 * $m;
+      right: 16/1.14286 * $m;
+      font-size: 16 * $m;
+      z-index: 1;
+    }
+
+    &.success {
+      &:before {
+        content: $i-check;
+        color: #179a3c;
+        opacity: 1;
+      }
+    }
+
+    &.error {
+      &:before {
+        content: $i-close;
+        color: #e75151;
+        opacity: 1;
+      }
+    }
   }
 
   &.form_cell_v2 {
@@ -15,17 +58,76 @@
   width: 100%;
 
   &.f_input_v1 {
+    @include transition_all(padding-top .3s, border-color .3s);
+    will-change: padding-top, border-color;
     height: 48 * $m;
     font: 14 * $m $AvenirNextCyrMedium;
     line-height: 1.2;
-    padding: 15 * $m 16 * $m;
+    padding: $m 45 * $m $m 16 * $m;
+    background: #fff;
+    border: 1px solid #e8e8e8;
+    border-radius: 4px;
+
+    &:focus {
+      padding-top: 25 * $m;
+      border-color: rgba(34, 116, 165, .4);
+    }
+
+    .success & {
+      border-color: #179a3c;
+    }
+
+    .error & {
+      border-color: #f5baba;
+    }
+  }
+
+  &.f_input_v2 {
+    @include transition_all(padding-top .3s, border-color .3s);
+    will-change: padding-top, border-color;
+    height: (48/1.28572) * $m;
+    font: 18 * $m $DINAlternateBold;
+    line-height: 1.2;
+    padding: (3/1.28572) * $m (35/1.28572) * $m 0;
     background: #fff;
     border: 1px solid #e8e8e8;
     border-radius: 4px;
   }
-
 }
 
 textarea.f_input_v1.f_input {
   height: 124 * $m;
+  padding-top: 15 * $m;
+}
+
+.f_placeholder {
+  @include transition_all(top .3s, font-size .3s, color .3s);
+  will-change: top, font-size, color;
+  position: absolute;
+  top: 15 * $m;
+  left: 16 * $m;
+
+  .is_empty ~ & {
+    display: none;
+  }
+
+  *:focus ~ & {
+    top: 6 * $m;
+    font-size: .9em;
+    color: #2274a5;
+    display: block;
+  }
+
+  .success & {
+    color: #179a3c;
+  }
+
+  .error & {
+    color: #e75151;
+  }
+
+  .formError ~ & {
+    display: none;
+  }
+
 }

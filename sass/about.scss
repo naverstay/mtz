@@ -1,0 +1,213 @@
+.history_section {
+  background: #f0f0f0;
+  padding: 80 * $m 0;
+}
+
+.history_list_w {
+  position: relative;
+  padding-top: 58 * $m;
+  overflow: hidden;
+}
+
+.history_list {
+  overflow: hidden;
+  position: relative;
+
+  li {
+    @extend %clearfix;
+    overflow: hidden;
+    padding-bottom: 73 * $m;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+}
+
+@import "dots";
+
+.mission_section {
+  text-align: center;
+  background: #fafafa;
+  padding: 68 * $m 0 80 * $m;
+
+  .section_caption {
+    margin-bottom: 42 * $m;
+  }
+
+  p {
+    margin: 0 auto;
+    max-width: 860 * $m;
+    line-height: 1.4;
+  }
+}
+
+.counters_section {
+  //@include transition_all(background-position .1s);
+  padding: 125 * $m 155 * $m 102 * $m;
+  background: url(../i/hero_about2.jpg) no-repeat fixed 50% 50%;
+  will-change: background-position;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position-x: 50% !important;
+  color: #fff;
+
+  .section_caption {
+    margin-bottom: 80 * $m;
+  }
+}
+
+.counters_list {
+  @extend %global_flex_block_row_wrap_space_between_stretch;
+  overflow: hidden;
+  padding-right: 60 * $m;
+
+  li {
+    float: left;
+    flex: 0 0 auto;
+    max-width: 25%;
+    margin-bottom: 50 * $m;
+  }
+}
+
+.counter_item {
+
+  p {
+    line-height: 1.4;
+    opacity: .8;
+  }
+}
+
+.counter_val {
+  position: relative;
+  margin-bottom: 30 * $m;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5 * $m;
+    width: 64 * $m;
+    height: 6 * $m;
+    background: #fff;
+  }
+}
+
+.certificates_section {
+  background: #fff;
+  padding: 125 * $m 0;
+
+  &._mod_1 {
+    padding-top: 68 * $m;
+  }
+}
+
+.certificates_list_w {
+  margin: 0 auto;
+  max-width: 1168 * $m;
+
+  > p {
+    max-width: 710 * $m;
+    line-height: 1.4;
+    margin-bottom: 25 * $m;
+  }
+}
+
+.certificates_list {
+  @extend %clearfix;
+  margin-left: -48 * $m;
+  padding-bottom: 18 * $m;
+
+  li {
+    float: left;
+    width: 50%;
+    margin-top: 40 * $m;
+    padding-left: 48 * $m;
+  }
+}
+
+.certificate_unit {
+  cursor: pointer;
+  display: block;
+  text-decoration: none;
+  color: #000;
+  position: relative;
+  border-radius: 4 * $m;
+  border: 1px solid #e4e4e4;
+  padding: 6 * $m 80 * $m 32 * $m 105 * $m;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 80 * $m;
+    border-radius: 4 * $m 0 0 4 * $m;
+    background: #eff3f5;
+  }
+}
+
+.certificate_icon {
+  @extend %icon_pseudo;
+  position: absolute;
+  top: 12 * $m;
+  left: 0;
+  z-index: 1;
+  width: 80 * $m;
+  text-align: center;
+
+  &:before {
+    content: $i-doc_pdf;
+    font-size: 55 * $m;
+  }
+}
+
+.certificate_doc {
+  position: absolute;
+  top: 26 * $m;
+  left: 0;
+  right: 4 * $m;
+}
+
+.certificate_size {
+  @include transition_all(opacity .3s, color .3s);
+  @extend %icon_pseudo;
+  will-change: opacity, color;
+  position: absolute;
+  width: 85 * $m;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  padding-top: 47 * $m;
+  opacity: .5;
+
+  &:before {
+    content: $i-search;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 17/1.71429 * $m;
+    font-size: 24 * $m;
+  }
+
+  .certificate_unit:hover & {
+    color: #2f6690;
+    opacity: 1;
+  }
+
+}
+
+.certificate_date {
+  opacity: .5;
+  position: absolute;
+  bottom: 7 * $m;
+  left: 104 * $m;
+}
+
+.certificate_name {
+  line-height: 1.3;
+}

@@ -1,0 +1,389 @@
+extends _layout.pug
+include _mixins.pug
+
+block variables
+  - var $m = 0.0714286666666667;
+  - var page_title = 'MTZ продукция';
+  - var html_class = 'manufacture_page full_height';
+  - var body_class = 'header_white_blue header_fixed';
+  - var has_footer = false;
+  - var nav_active = 1;
+  - var dropdown_active = 0;
+  - var script_set = 6;
+  - var menu_open_dt = true;
+    
+  - var diameter = [630,1020,2020,2820,720,1220,2220,3000,820,1420,2420,3200,920,1620,2620,3500]
+    
+  - var width = [8,9,10,11,12,14,16,18,19,20,22,24,25]
+    
+  - var norm = ['ГОСТ 10706-76', 'ТУ 14-3Р-56-2001', 'ГОСТ 20295-85', 'ГОСТ 20295-85 (без поперечного шва)']
+    
+  - var marka = ['09Г2С', 'Ст 20', '17Г1С', 'Ст 3']
+
+block content
+  .product_section.productSection()
+    .tab_holder.ff_din
+      
+      .active_tab_slider
+        //.activeTabSlider.swiper-no-swiping_.swiper-container
+        .swiper-wrapper.tab_wrapper.activeTabSlider
+          +loop_while(1)
+            .tab_item.swiper-slide: span.tab_link: span.fz_22 Трубы бесшовные
+            .tab_item.swiper-slide: span.tab_link: span.fz_22 Трубы электросварные
+            .tab_item.swiper-slide: span.tab_link: span.fz_22 Отводы сварные
+            .tab_item.swiper-slide: span.tab_link: span.fz_22 Тройники сварные
+      
+      .tab_slider
+        //.tabSlider.swiper-no-swiping_.swiper-container
+        .swiper-wrapper.tab_slider_wrapper.tabSlider
+          +loop_while(1)
+            .tab_item.swiper-slide: a.tab_link.tabLinkClone(href='#product_tab_1'): span.fz_22 Трубы бесшовные
+            .tab_item.swiper-slide: a.tab_link.tabLinkClone(href='#product_tab_2'): span.fz_22 Трубы электросварные
+            .tab_item.swiper-slide: a.tab_link.tabLinkClone(href='#product_tab_3'): span.fz_22 Отводы сварные
+            .tab_item.swiper-slide: a.tab_link.tabLinkClone(href='#product_tab_4'): span.fz_22 Тройники сварные
+
+    .hide: ul#product_switcher.swiper-wrapper.tab_wrapper
+      +loop_while(1)
+        li: a.tab_link(href='#product_tab_1'): span.fz_22 Трубы бесшовные
+        li: a.tab_link(href='#product_tab_2'): span.fz_22 Трубы электросварные
+        li: a.tab_link(href='#product_tab_3'): span.fz_22 Отводы сварные
+        li: a.tab_link(href='#product_tab_4'): span.fz_22 Тройники сварные 
+            
+    .product_options_playground
+      .product_option_slider.productOptionSlider.swiper-container
+        +loop_while(4)
+          .tab_slide
+            form.product_options(action='#')
+              .mCSB.product_options_w
+                .product_options_inner
+                  ul.product_option_list
+                    li._size_1
+                      .product_option_unit
+                        .product_option_caption
+                          span.fz_18.ff_din.let-_032 Диаметр, D (мм)
+    
+                        .product_option_switcher_w: ul.product_option_switcher._col_4.text_center
+                          for d in diameter
+                            li
+                              label.btn_v4.switch_btn
+                                input.inp_hidden(type='checkbox')
+                                span.check_text
+                                  span.ff_avenir_med.fz_14= d
+    
+                    li._size_2
+                      .product_option_unit
+                        .product_option_caption
+                          span.fz_18.ff_din.let-_032 Толщина стенки, S мм
+    
+                        .product_option_switcher_w: ul.product_option_switcher._col_4.text_center
+                          for w in width
+                            li
+                              label.btn_v4.switch_btn
+                                input.inp_hidden(type='checkbox')
+                                span.check_text
+                                  span.ff_avenir_med.fz_14= w
+    
+                    li._size_1
+                      .product_option_unit
+                        .product_option_caption
+                          span.fz_18.ff_din.let-_032 Норматив
+    
+                        .product_option_switcher_w: ul.product_option_switcher
+                          for n in norm
+                            li
+                              label.btn_v4.switch_btn
+                                input.inp_hidden(type='checkbox')
+                                span.check_text
+                                  span.ff_avenir_med.fz_14= n
+    
+                    li._size_2
+                      .product_option_unit
+                        .product_option_caption
+                          span.fz_18.ff_din.let-_032 Марка стали
+    
+                        .product_option_switcher_w: ul.product_option_switcher._col_3.text_center
+                          for m in marka
+                            li
+                              label.btn_v4.switch_btn
+                                input.inp_hidden(type='checkbox')
+                                span.check_text
+                                  span.ff_avenir_med.fz_14= m
+    
+                  button.product_filter_reset(type='reset')
+                    span: span.i-close.fz_20
+                    span.fz_16 Сбросить фильтр
+                    
+      .tab_panels.tabBlock(data-tab-context='#product_switcher')
+        #product_tab_1.tab_panel
+          .tab_content
+            .product_description.mCSB
+              +product_description_inner()
+  
+        #product_tab_2.tab_panel
+          .tab_content
+            .product_description.mCSB
+              +product_description_inner(2)
+  
+        #product_tab_3.tab_panel
+          .tab_content
+            .product_description.mCSB
+              +product_description_inner(3)
+  
+        #product_tab_4.tab_panel
+          .tab_content
+            .product_description.mCSB
+              +product_description_inner(4)
+
+      .product_options_footer
+        ul.product_options_total
+          li
+            .product_option
+              .product_option_val
+                span.fz_48.ff_din 62 900
+              .product_option_label
+                span.ff_avenir_med Цена за тонну (с НДС), руб.
+  
+          li
+            .product_option
+              .product_option_val
+                span.fz_48.ff_din 37 753
+              .product_option_label
+                span.ff_avenir_med Цена за п. метр (с НДС), руб.
+  
+          li
+            .product_option
+              .product_option_val
+                span.fz_48.ff_din 600
+              .product_option_label
+                span.ff_avenir_med Масса п. метра, кг
+  
+        ul.product_options_controls
+          li
+            a.btn_v3.option_btn.ff_din.btn_light_blue.toggleOptionsPanel(href='#')
+              span.option_arrow
+                span.i-chevron_left.fz_34
+              span: span.fz_20 Мой запрос
+              span.option_counter
+                span.fz_20.optionCounter 2
+  
+          li.quantityBlockHolder
+            .quantity_block.quantityBlock
+              p
+                span.ff_avenir_med.fz_18 Какой объём необходим, тонн?
+  
+              .quantity_block_counter: .valCell.input_w
+                input.f_input.f_input_v2.text_center(value='30' data-min='1' data-max='1000' data-step='1' data-inputmask="'alias': 'numeric', 'rightAlign': false, 'allowMinus': false, 'allowPlus': false, 'autoGroup': false, 'groupSeparator': '', 'autoUnmask': true, 'digits': 0, 'placeholder': '0', 'digitsOptional': false" )
+                span.btn_v5.butt-white.counter_btn._minus.valMinus.btn_gray
+                span.btn_v5.butt-white.counter_btn._plus.valPlus.btn_gray
+  
+            a.btn_v3.option_btn.ff_din.btn_red.openQuantityBtn(href='#')
+              span: span.fz_20 Добавить к запросу
+
+      form.product_options_panel.optionsPanel.validateMe(action='#')
+        .product_options
+          .mCSB.product_options_w
+            .product_options_inner
+              .product_option_caption
+                span.fz_18.ff_din.let-_032 Мой запрос
+                
+              ul.product_order_list
+                li
+                  .product_order_unit.productOrderUnit
+                    .product_order_head
+                      .product_order_index 
+                        span.fz_18.ff_din 1
+                      .product_order_row
+                        .product_order_col_1
+                          .product_order_name 
+                            span.ff_avenir_med.fz_14 Отвод сварной секторный
+                          .product_order_collapse
+                            a.collapse_link.orderCollapseBtn(href='#')
+                              span.fz_12.ff_avenir_med Подробнее
+                            
+                        .product_order_col_2
+                          .product_order_counter
+                            .valCell.input_w
+                              input.f_input.f_input_v2.text_center(value='30' data-min='1' data-max='1000' data-step='1' data-inputmask="'alias': 'numeric', 'rightAlign': false, 'allowMinus': false, 'allowPlus': false, 'autoGroup': false, 'groupSeparator': '', 'autoUnmask': true, 'digits': 0, 'placeholder': '0', 'digitsOptional': false" )
+                              span.btn_v5.butt-white.counter_btn._minus.valMinus.btn_gray
+                              span.btn_v5.butt-white.counter_btn._plus.valPlus.btn_gray
+                              
+                            .product_order_label 
+                              span.fz_12 Количество, шт
+                              
+                        .product_order_col_3
+                          .product_order_counter
+                            span.fz_18.ff_din.let-_045 24 570 руб.
+                            
+                            .product_order_label
+                              span.fz_12 Стоимость, шт
+                              
+                      .product_order_remove.removeOrder
+                        span.i-close.fz_18
+                    
+                    .product_order_info.orderInfo
+                      .product_order_row
+                        .product_order_col_1
+                          .product_order_param
+                            span.fz_24.ff_din.let-_058 820
+                          .product_order_label
+                            span.fz_12.let_08 Диаметр, Dн (мм)
+                            
+                        .product_order_col_3
+                          .product_order_param
+                            span.fz_24.ff_din.let-_058 45
+                          .product_order_label
+                            span.fz_12.let_08 Угол загиба, º
+                            
+                        .product_order_col_1
+                          .product_order_param
+                            span.fz_24.ff_din.let-_058 1,5
+                          .product_order_label
+                            span.fz_12.let_08 Радиус загиба, Ду
+                            
+                        .product_order_col_3
+                          .product_order_param
+                            span.fz_24.ff_din.let-_058 2,5
+                          .product_order_label
+                            span.fz_12.let_08 Допустимое давление среды, Ру (МПа)
+                            
+                        .product_order_col_1
+                          .product_order_param
+                            span.fz_24.ff_din.let-_058 ОСТ 36-21-77
+                          .product_order_label
+                            span.fz_12.let_08 Норматив
+                            
+                        .product_order_col_3
+                          .product_order_param
+                            span.fz_24.ff_din.let-_058 Ст 20
+                          .product_order_label
+                            span.fz_12.let_08 Марка стали
+                            
+                        .product_order_col_1
+                          .product_order_param
+                            span.fz_24.ff_din.let-_058 12
+                          .product_order_label
+                            span.fz_12.let_08 Толщина стенки, S (мм)
+                            
+                      a.product_info_collapse.orderCollapseBtn(href='#')
+                        span: span.fz_16.i-chevron_up
+                        span.fz_16 Скрыть детали
+                            
+                li
+                  .product_order_unit.productOrderUnit
+                    .product_order_head
+                      .product_order_index 
+                        span.fz_18.ff_din 2
+                      .product_order_row
+                        .product_order_col_1
+                          .product_order_name 
+                            span.ff_avenir_med.fz_14 Отвод сварной секторный
+                          .product_order_collapse
+                            a.collapse_link.orderCollapseBtn(href='#')
+                              span.fz_12.ff_avenir_med Подробнее
+                            
+                        .product_order_col_2
+                          .product_order_counter
+                            .valCell.input_w
+                              input.f_input.f_input_v2.text_center(value='30' data-min='1' data-max='1000' data-step='1' data-inputmask="'alias': 'numeric', 'rightAlign': false, 'allowMinus': false, 'allowPlus': false, 'autoGroup': false, 'groupSeparator': '', 'autoUnmask': true, 'digits': 0, 'placeholder': '0', 'digitsOptional': false" )
+                              span.btn_v5.butt-white.counter_btn._minus.valMinus.btn_gray
+                              span.btn_v5.butt-white.counter_btn._plus.valPlus.btn_gray
+                              
+                            .product_order_label 
+                              span.fz_12 Количество, шт
+                              
+                        .product_order_col_3
+                          .product_order_counter
+                            span.fz_18.ff_din.let-_045 24 570 руб.
+                            
+                            .product_order_label
+                              span.fz_12 Стоимость, шт
+                              
+                      .product_order_remove.removeOrder
+                        span.i-close.fz_18
+                    
+                    .product_order_info.orderInfo
+                      .product_order_row
+                        .product_order_col_1
+                          .product_order_param
+                            span.fz_24.ff_din.let-_058 820
+                          .product_order_label
+                            span.fz_12.let_08 Диаметр, Dн (мм)
+                            
+                        .product_order_col_3
+                          .product_order_param
+                            span.fz_24.ff_din.let-_058 45
+                          .product_order_label
+                            span.fz_12.let_08 Угол загиба, º
+                            
+                        .product_order_col_1
+                          .product_order_param
+                            span.fz_24.ff_din.let-_058 1,5
+                          .product_order_label
+                            span.fz_12.let_08 Радиус загиба, Ду
+                            
+                        .product_order_col_3
+                          .product_order_param
+                            span.fz_24.ff_din.let-_058 2,5
+                          .product_order_label
+                            span.fz_12.let_08 Допустимое давление среды, Ру (МПа)
+                            
+                        .product_order_col_1
+                          .product_order_param
+                            span.fz_24.ff_din.let-_058 ОСТ 36-21-77
+                          .product_order_label
+                            span.fz_12.let_08 Норматив
+                            
+                        .product_order_col_3
+                          .product_order_param
+                            span.fz_24.ff_din.let-_058 Ст 20
+                          .product_order_label
+                            span.fz_12.let_08 Марка стали
+                            
+                        .product_order_col_1
+                          .product_order_param
+                            span.fz_24.ff_din.let-_058 12
+                          .product_order_label
+                            span.fz_12.let_08 Толщина стенки, S (мм)
+                            
+                      a.product_info_collapse.orderCollapseBtn(href='#')
+                        span: span.fz_16.i-chevron_up
+                        span.fz_16 Скрыть детали
+                            
+                            
+              .product_option_caption
+                span.fz_18.ff_din.let-_032 Мои данные
+  
+              form.validateMe(action='#')
+                .form_cell.form_cell_v1.formCell
+                  input#user_name.f_input_v1.f_input.inpPlaceholder(class='validate[required]' data-errormessage="Похоже, вы неправильно указали имя")
+                  label(for='user_name').f_placeholder
+                    span.fz_14.ff_avenir_med Ваше имя 
+                .form_cell.form_cell_v1.formCell
+                  input#user_email.f_input_v1.f_input.inpPlaceholder(class='validate[required]' data-errormessage="Похоже, вы неправильно указали E-mail")
+                  label(for='user_email').f_placeholder
+                    span.fz_14.ff_avenir_med E-mail
+
+                .form_cell.form_cell_v1.formCell
+                  input#user_phone.f_input_v1.f_input.inpPlaceholder(class='validate[required]' data-errormessage="Похоже, вы неправильно указали телефон")
+                  label(for='user_phone').f_placeholder
+                    span.fz_14.ff_avenir_med Телефон
+
+                .form_cell.form_cell_v2
+                  textarea#user_comment.f_input_v1.f_input.inpPlaceholder()
+                  label(for='user_comment').f_placeholder
+                    span.fz_14.ff_avenir_med Комменарий (опционально)
+                    
+                  .form_tip
+                    p Чтобы узнать срок поставки или получить консультацию, свяжитесь с нами по телефону +7 (495) 724-10-31 или отправьте запрос on-line.
+          
+          .product_options_footer
+            ul.product_options_controls
+              li
+                a.btn_v3.option_btn.ff_din.btn_light_blue.toggleOptionsPanel(href='#')
+                  span.option_arrow
+                    span.i-chevron_left.fz_34
+                  span: span.fz_20 Назад
+
+              li
+                button.btn_v3.option_btn.ff_din.btn_red
+                  span: span.fz_20 Отправить запрос

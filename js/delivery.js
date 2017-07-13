@@ -15,6 +15,8 @@ d3.selection.prototype.moveToBack = function () {
 
 $(function ($) {
 
+  initValidation();
+  
   d3.selectAll('.mapHolder .region').on('mouseenter', function () {
     var reg = d3.select(this), box = this.getBBox();
 

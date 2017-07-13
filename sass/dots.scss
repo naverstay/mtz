@@ -1,0 +1,321 @@
+$size: 1px;
+
+.history_period {
+  position: relative;
+  clear: both;
+  width: 50%;
+  padding: 0 40 * $size;
+  margin-bottom: 50 * $size;
+
+  &:after,
+  &:before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    margin-left: -1px;
+    height: 1000 * $size;
+    background: #d4d4d4;
+  }
+
+  &:before {
+    bottom: 50%;
+  }
+
+  &:after {
+    top: 50%;
+  }
+
+  &._left {
+    float: left;
+
+    &:after,
+    &:before {
+      right: 0;
+    }
+
+    .history_year_dot {
+      @include transform_translate(-1px, 0);
+      right: -40 * $size;
+      margin-right: -8 * $size;
+
+      &._hover {
+        @include transform_translate(0, 0);
+        margin-right: -14 * $size;
+      }
+
+      &._small {
+        margin-right: -3 * $size;
+      }
+    }
+
+    .history_period_info {
+      float: right;
+    }
+
+    .history_year {
+      float: right;
+
+      &:before {
+        right: 0;
+      }
+    }
+  }
+
+  &._right {
+    float: right;
+    margin-right: 1px;
+
+    &:after,
+    &:before {
+      left: 0;
+    }
+
+    .history_year_dot {
+      left: -40 * $size;
+      margin-left: -8 * $size;
+
+      &._hover {
+        margin-left: -15 * $size;
+      }
+
+      &._small {
+        margin-left: -3 * $size;
+      }
+    }
+
+    .history_period_info {
+      float: left;
+    }
+
+    .history_year {
+      float: left;
+
+      &:before {
+        left: 0;
+      }
+    }
+  }
+
+  &._full {
+    &:after,
+    &:before {
+      background: #2274a5;
+    }
+  }
+
+  &._begining {
+    &:before {
+      background: #7aabc9;
+    }
+  }
+
+  &._ending {
+    margin: 0 auto;
+    padding-top: 35 * $size;
+    text-align: center;
+
+    &:after {
+      display: none;
+    }
+
+    &:before {
+      left: 50%;
+      margin-left: -2px;
+    }
+
+    .history_year {
+      margin-bottom: 0;
+      margin-right: 1px;
+      padding-top: 27 * $size;
+      padding-bottom: 28 * $size;
+      letter-spacing: -.05em;
+      background: #f0f0f0;
+
+      &:before {
+        display: none;
+      }
+    }
+
+    .history_year_dot {
+      margin-left: -8 * $size;
+      bottom: 100%;
+      left: 50%;
+      top: auto;
+
+      &._hover {
+        margin-left: -15 * $size;
+      }
+    }
+  }
+}
+
+.history_year {
+  z-index: 2;
+  position: relative;
+  color: #2274a5;
+  margin-bottom: 65 * $size;
+  letter-spacing: -.2em;
+
+  &:before {
+    content: '';
+    position: absolute;
+    height: 4 * $size;
+    width: 32 * $size;
+    background: #2274a5;
+    bottom: -8 * $size;
+  }
+
+  &._light {
+    color: #7aabc9;
+
+    &:before {
+      background: #7aabc9;
+    }
+
+    .history_year_dot {
+      background: #7aabc9;
+
+      &:before {
+        border-color: #7aabc9;
+      }
+    }
+  }
+}
+
+.history_dot {
+  @include transition_all(height .3s);
+  @extend %hor_centr;
+  will-change: height;
+  position: absolute;
+  top: 80 * $size;
+  height: 0;
+  content: '';
+  margin-left: -1px;
+  width: 2 * $size;
+  background: #70aacb;
+
+  &:before {
+    content: '';
+    top: 100%;
+    left: 50%;
+    margin-left: -3px;
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: #7aabc9;
+    border-radius: 100%;
+  }
+}
+
+.history_year_dot {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  border-radius: 100%;
+  background: #2274a5;
+  width: 16 * $size;
+  height: 16 * $size;
+  margin-top: -8 * $size;
+
+  &._end {
+    &:before {
+      content: '';
+      position: absolute;
+      top: 100%;
+      width: 2px;
+      left: 50%;
+      margin-left: -1px;
+      height: 1000 * $size;
+      background: #f0f0f0;
+      z-index: 2;
+    }
+  }
+
+  &._start {
+    margin-top: -5 * $size;
+
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: 100%;
+      width: 2px;
+      left: 50%;
+      margin-left: -1px;
+      height: 1000 * $size;
+      background: #f0f0f0;
+      z-index: 1;
+    }
+  }
+
+  &._small {
+    width: 6 * $size;
+    height: 6 * $size;
+    margin-top: $size;
+  }
+
+  &._hover {
+    width: 30 * $size;
+    height: 30 * $size;
+    margin-top: -12 * $size;
+    border: 7 * $size solid #f0f0f0;
+
+    &:after {
+      @extend %hor_vert_centr;
+      content: '';
+      position: absolute;
+      border-radius: 100%;
+      width: 30 * $size;
+      height: 30 * $size;
+      top: 50%;
+      left: 50%;
+      border: 2px solid #2274a5;
+      z-index: 2;
+    }
+  }
+
+  ._prev_full & {
+    &:before {
+      //content: '';
+      //position: absolute;
+      //bottom: 100%;
+      //width: 2px;
+      //left: 50%;
+      //margin-left: -1px;
+      //height: 1000 * $size;
+      //background: #2274a5;
+      //z-index: 1;
+    }
+
+    &._hover {
+      &:before {
+        margin-bottom: 6px;
+      }
+    }
+  }
+
+  ._prev_begining & {
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: 100%;
+      width: 2px;
+      left: 50%;
+      margin-left: -1px;
+      height: 1000 * $size;
+      background: #7aabc9;
+      z-index: 1;
+    }
+  }
+}
+
+.history_period_info {
+  clear: both;
+  position: relative;
+  line-height: 1.35;
+  padding: 24 * $size;
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  border-radius: 4 * $size;
+  width: 608 * $size;
+  max-width: 100%;
+}

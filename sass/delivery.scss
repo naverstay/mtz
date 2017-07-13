@@ -20,6 +20,12 @@
     position: relative;
     z-index: 1;
     padding-bottom: 105 * $m;
+
+    svg {
+      .region_name {
+        display: none !important;
+      }
+    }
   }
 
   .map_holder {
@@ -54,7 +60,7 @@
   z-index: 1;
   padding: 120 * $m 70 * $m;
 
-  p {
+  > p {
     font-family: $AvenirNextCyrMedium;
     line-height: 1.4;
     margin-bottom: 33 * $m;
@@ -62,14 +68,17 @@
 }
 
 .delivery_calc_caption {
-  font-family: $DINAlternateBold;
   margin-bottom: 10 * $m;
-  letter-spacing: -.05em;
 }
 
 .contacts_section {
   @extend %clearfix;
   position: relative;
+  height: 100%;
+
+  .section_inner {
+    height: 100%;
+  }
 }
 
 .contacts_form {
@@ -81,7 +90,8 @@
 .contacts_map {
   width: 59.9%;
   float: right;
-  height: 850 * $m;
+  min-height: 100%;
+  height: 826 * $m;
   margin-right: -15 * $m;
   position: relative;
   background: #fafafa;
@@ -96,9 +106,8 @@
 }
 
 .contacts_defs {
-  font-family: $AvenirNextCyrMedium;
   padding: 5 * $m 0 25 * $m;
-  
+
   dt {
     display: block;
     margin-bottom: 5 * $m;

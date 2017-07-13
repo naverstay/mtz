@@ -4,9 +4,9 @@ include _mixins.pug
 block variables
   - var $m = 0.0714286666666667;
   - var page_title = 'MTZ контакты';
-  - var html_class = '';
+  - var html_class = 'full_height';
   - var body_class = 'header_white_blue header_fixed';
-  - var has_footer = true;
+  - var has_footer = false;
   - var nav_active = 5;
   - var dropdown_active = 0;
   - var script_set = 5;
@@ -17,9 +17,9 @@ block content
     .section_inner.clearfix
       .contacts_form
         .delivery_calc_caption 
-          span.fz_18 Контакты
+          span.fz_18.ff_din.let-_03 Контакты
         
-        dl.contacts_defs
+        dl.contacts_defs.ff_avenir_med
           dt
             span.fz_16 Пн-Пт с 9:00 до 18:00
           dd
@@ -41,18 +41,23 @@ block content
             span.fz_14 Адрес
             
         .delivery_calc_caption
-          span.fz_18 Написать нам
+          span.fz_18.ff_din.let-_03 Написать нам
           
-        form(action='#')
-          .form_cell.form_cell_v1
-            input.f_input_v1.f_input(placeholder='Ваше имя')
-            
-          .form_cell.form_cell_v1
-            input.f_input_v1.f_input(placeholder='Телефон')
-            
+        form.validateMe(action='#')
+          .form_cell.form_cell_v1.formCell
+            input#user_name.f_input_v1.f_input.inpPlaceholder(class='validate[required]' data-errormessage="Похоже, вы неправильно указали имя")
+            label(for='user_name').f_placeholder
+              span.fz_14.ff_avenir_med Ваше имя 
+          .form_cell.form_cell_v1.formCell
+            input#user_phone.f_input_v1.f_input.inpPlaceholder(class='validate[required]' data-errormessage="Похоже, вы неправильно указали телефон")
+            label(for='user_phone').f_placeholder
+              span.fz_14.ff_avenir_med Телефон
+
           .form_cell.form_cell_v2
-            textarea.f_input_v1.f_input(placeholder='Комменарий (опционально)')
-            
+            textarea#user_comment.f_input_v1.f_input.inpPlaceholder()
+            label(for='user_comment').f_placeholder
+              span.fz_14.ff_avenir_med Комменарий (опционально)
+
           .form_cell.form_cell_v1
             button.btn_red.btn_v2.calc_btn
               span.fz_20 Отправить

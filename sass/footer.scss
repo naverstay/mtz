@@ -30,7 +30,7 @@
     .contacts_col {
       width: 23%;
     }
-    
+
     .main_nav_col {
       padding-left: 30 * $m;
     }
@@ -49,7 +49,6 @@
 
 .dev_link {
   color: #fff;
-  font-family: $AvenirNextCyrMedium;
   position: relative;
 }
 
@@ -76,6 +75,18 @@
   right: 0;
 }
 
+.ff_din {
+  font-family: $DINAlternateBold;
+}
+
+.ff_avenir_med {
+  font-family: $AvenirNextCyrMedium;
+}
+
+.fz_12 {
+  font-size: 12 * $m;
+}
+
 .fz_14 {
   font-size: 14 * $m;
 }
@@ -96,8 +107,16 @@
   font-size: 21 * $m;
 }
 
+.fz_22 {
+  font-size: 22 * $m;
+}
+
 .fz_24 {
   font-size: 24 * $m;
+}
+
+.fz_26 {
+  font-size: 26 * $m;
 }
 
 .fz_28 {
@@ -108,8 +127,32 @@
   font-size: 30 * $m;
 }
 
+.fz_34 {
+  font-size: 34 * $m;
+}
+
+.fz_38 {
+  font-size: 38 * $m;
+}
+
+.fz_40 {
+  font-size: 40 * $m;
+}
+
 .fz_48 {
   font-size: 48 * $m;
+}
+
+.fz_56 {
+  font-size: 56 * $m;
+}
+
+.fz_77 {
+  font-size: 77 * $m;
+}
+
+.let-_015 {
+  letter-spacing: -.015em;
 }
 
 .let-_025 {
@@ -118,6 +161,14 @@
 
 .let-_03 {
   letter-spacing: -.03em;
+}
+
+.let-_032 {
+  letter-spacing: -.032em;
+}
+
+.let-_035 {
+  letter-spacing: -.035em;
 }
 
 .let-_038 {
@@ -136,6 +187,10 @@
   letter-spacing: -.05em;
 }
 
+.let-_058 {
+  letter-spacing: -.058em;
+}
+
 .let_01 {
   letter-spacing: .01em;
 }
@@ -146,6 +201,14 @@
 
 .let_025 {
   letter-spacing: .025em;
+}
+
+.let_08 {
+  //letter-spacing: .08em;
+}
+
+.let_1 {
+  letter-spacing: .1em;
 }
 
 .lh_1 {
@@ -172,10 +235,6 @@
   margin-bottom: 40 * $m;
 }
 
-.fw_med {
-  font-family: $AvenirNextCyrMedium;
-}
-
-.din_bold {
-  font-family: $DINAlternateBold;
+.mt_68 {
+  margin-top: 68px;
 }

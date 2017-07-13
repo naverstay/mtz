@@ -11,16 +11,16 @@
   .section_inner {
     padding: 0 70 * $m;
   }
-  
+
   .header_fixed & {
     position: fixed;
     border-bottom: 1px solid #d8d8d8;
   }
-  
+
   .header_white_blue & {
     background: #fff;
   }
-  
+
 }
 
 .logo_block {
@@ -46,9 +46,10 @@
 
     * {
       @include transition_all(fill .6s cubic-bezier(0.4, 0, 0.2, 1), stroke .6s cubic-bezier(0.4, 0, 0.2, 1));
+      will-change: fill, stroke;
     }
   }
-  
+
   .footer_logo & {
     svg {
       #Group {
@@ -65,7 +66,7 @@
       }
     }
   }
-  
+
 }
 
 .callback_block {
@@ -76,12 +77,12 @@
   //$fz: 18;
 
   @extend %icon_pseudo;
-  @include transition_all(background .6s cubic-bezier(1, 0, 0, 1), color .6s cubic-bezier(1, 0, 0, 1));
+  @include transition_all(background .3s, color .3s);
+  will-change: background, color;
   position: relative;
   display: inline-block;
   vertical-align: middle;
   padding: (15 * $m) (72 * $m) (15 * $m) (16 * $m);
-  font-family: $DINAlternateBold;
   line-height: 28 * $m;
   height: 56 * $m;
   letter-spacing: -.055em;
@@ -93,8 +94,11 @@
   //height: 56em/$fz;
   //font: $fz * $m $DINAlternateBold;
   background: #fff;
-  box-shadow: 0 0 8 * $m 0 rgba(0, 0, 0, 0.20);
   border-radius: 28 * $m;
+
+  .home_page & {
+    box-shadow: 0 0 8 * $m 0 rgba(0, 0, 0, 0.20);
+  }
 
   span {
     position: relative;
@@ -105,13 +109,14 @@
 
   .swap_text,
   &:before {
-    @include transition_all(transform .6s cubic-bezier(1, 0, 0, 1), background .6s cubic-bezier(1, 0, 0, 1));
+    @include transition_all(transform .3s, background .3s);
+    will-change: transform, background;
     position: absolute;
     right: 0;
     top: 0;
     bottom: 0;
     line-height: 56/$fz;
-    border-radius: 28em/$fz;
+    border-radius: 56em/$fz;
     background: #e75151;
   }
 
@@ -136,11 +141,11 @@
   }
 
   &:hover {
-    background: #e75151;
-    color: #fff;
-
+    
     .swap_text {
       @include transform_translate(0, 0);
+      background: #e75151;
+      color: #fff;
     }
   }
 
@@ -187,17 +192,18 @@
 
 .menu_link {
   @include transition_all(color .3s);
+  will-change: color;
   cursor: pointer;
   position: relative;
   display: inline-block;
   vertical-align: middle;
   text-decoration: none;
-  font-family: $DINAlternateBold;
   letter-spacing: -.03em;
   color: #000;
 
   &:before {
     @include transition_all(width .6s cubic-bezier(1, 0, 0, 1), background .3s cubic-bezier(1, 0, 0, 1));
+    will-change: background, width;
     content: '';
     position: absolute;
     bottom: -5 * $m;
@@ -278,6 +284,14 @@
 
       &:before {
         background: #000;
+      }
+
+      &:hover {
+        color: #2f6690;
+
+        &:before {
+          background: #2f6690;
+        }
       }
 
       &._active {

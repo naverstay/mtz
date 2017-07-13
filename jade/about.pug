@@ -1,0 +1,254 @@
+extends _layout.pug
+include _mixins.pug
+
+block variables
+  - var $m = 0.0714286666666667;
+  - var page_title = 'MTZ о компании';
+  - var html_class = '';
+  - var body_class = 'header_white_blue header_fixed';
+  - var has_footer = true;
+  - var nav_active = 4;
+  - var dropdown_active = 0;
+  - var script_set = 7;
+  - var menu_open_dt = true;
+
+block content
+  .history_section
+    .section_inner
+      .section_caption.text_center
+        span.fz_48.let-_038.ff_din История
+
+      .history_list_w
+        ul.history_list.historyBlock
+          li: .history_period._right
+            .history_year
+              .historyYearDot.history_year_dot._start._hover
+              span.fz_40.ff_din 2011
+                
+            .history_period_info
+              span.fz_20.ff_avenir_med Наше оборудование позволяет выпускать трубы и сопутствующую продукцию диаметром от 720 до 3500 мм и толщиной стенки в диапазоне от 8 до 25 мм.
+        
+          li: .history_period._left
+            .history_year._light
+              .historyYearDot.history_year_dot
+              span.fz_40.ff_din 2012
+        
+            .history_period_info
+              span.fz_20.ff_avenir_med В 2012 году компанией ООО «Мытищинский Трубный Завод» был получен сертификат соответствия ГОСТ 10706-76.
+              
+          li: .history_period._right
+            .history_year._light
+              .historyYearDot.history_year_dot
+              span.fz_40.ff_din 2014
+                
+            .history_period_info
+              span.fz_20.ff_avenir_med В 2014 году производство было сертифицировано по ГОСТ 20295-85 и ISO 9001:2011 (ISO 9001:2008).
+        
+          li: .history_period._left
+            .history_year._light
+              .historyYearDot.history_year_dot
+              span.fz_40.ff_din 2015
+        
+            .history_period_info
+              span.fz_20.ff_avenir_med В 2015 году лаборатория неразрушающего контроля была аттестована в соответствии с требованиями Ростехнадзора.
+              
+          li: .history_period._ending
+            .history_year._light
+              .historyYearDot.history_year_dot
+              span.fz_40.ff_din Продолжаем развитие
+              
+        .history_dot.historyDot 
+          
+  .mission_section
+    .section_inner
+      .section_caption.text_center
+        span.fz_48.let-_038.ff_din Миссия
+        
+      p
+        span.fz_20.let_015 Мы способствуем развитию бизнеса наших клиентов и экономики России, повышая конкурентоспособность нашей страны на международном рынке. Мы определяем стандарты и вектор развития индустрии высоких технологий и идем в авангарде позитивных преобразований, изменяя мир к лучшему.
+        
+  .counters_section(data-stellar-background-ratio="0.3")
+    .section_inner
+      .section_caption.text_center
+        span.fz_48.let-_038.ff_din Завод в цифрах
+      
+      ul.counters_list
+        li 
+          .counter_item
+            .counter_val
+              span.fz_77.ff_din.let-_058 530-1420
+            
+            p
+              span.fz_20.let_015 Диаметр труб, мм
+              
+        li 
+          .counter_item
+            .counter_val
+              span.fz_77.ff_din.let-_058 12,2
+            
+            p
+              span.fz_20.let_015 Длина труб до, м
+              
+        li 
+          .counter_item
+            .counter_val
+              span.fz_77.ff_din.let-_058 х100
+            
+            p
+              span.fz_20.let_015 Прочность стали до
+              
+        li 
+          .counter_item
+            .counter_val
+              span.fz_77.ff_din.let-_058 50,0
+            
+            p
+              span.fz_20.let_015 Испытательное<br>давление до, МПа
+              
+  .certificates_section
+    .section_inner
+      .certificates_list_w
+        .section_caption.text_center.mb_20
+          span.fz_48.let-_038.ff_din Сертификаты
+        
+        ul.certificates_list
+          li
+            a.certificate_unit(href='certificates.html')
+              .certificate_icon_w
+                .certificate_icon
+                  .certificate_doc 
+                    span.ff_din.fz_14 .pdf
+                  
+              .certificate_name 
+                span.ff_avenir_med.fz_16 Сертификат соответствия <br>ГОСТ 20295-85
+              .certificate_date
+                span.fz_12.ff_avenir_med 30.06.2014
+              .certificate_size 
+                span.fz_14.ff_din.let-_015 2,3 Mb
+                
+          li
+            a.certificate_unit(href='certificates.html')
+              .certificate_icon_w
+                .certificate_icon
+                  .certificate_doc 
+                    span.ff_din.fz_14 .pdf
+                  
+              .certificate_name 
+                span.ff_avenir_med.fz_16 Сертификат соответствия <br>ТУ 1381-002-13152697-2015
+              .certificate_date
+                span.fz_12.ff_avenir_med 30.06.2014
+              .certificate_size 
+                span.fz_14.ff_din.let-_015 2,3 Mb
+                
+          li
+            a.certificate_unit(href='certificates.html')
+              .certificate_icon_w
+                .certificate_icon
+                  .certificate_doc 
+                    span.ff_din.fz_14 .pdf
+                  
+              .certificate_name 
+                span.ff_avenir_med.fz_16 Декларация о соответствии<br>требованиям таможенного союза
+              .certificate_date
+                span.fz_12.ff_avenir_med 30.06.2014
+              .certificate_size 
+                span.fz_14.ff_din.let-_015 2,3 Mb
+                
+          li
+            a.certificate_unit(href='certificates.html')
+              .certificate_icon_w
+                .certificate_icon
+                  .certificate_doc 
+                    span.ff_din.fz_14 .pdf
+                  
+              .certificate_name 
+                span.ff_avenir_med.fz_16 Сертификат соответствия <br>ГОСТ ISO 9001-2011 (ISO 9001:2008)
+              .certificate_date
+                span.fz_12.ff_avenir_med 30.06.2014
+              .certificate_size 
+                span.fz_14.ff_din.let-_015 2,3 Mb
+                
+          li
+            a.certificate_unit(href='certificates.html')
+              .certificate_icon_w
+                .certificate_icon
+                  .certificate_doc
+                    span.ff_din.fz_14 .pdf
+    
+              .certificate_name
+                span.ff_avenir_med.fz_16 Сертификат соответствия <br>ГОСТ 20295-85
+              .certificate_date
+                span.fz_12.ff_avenir_med 30.06.2014
+              .certificate_size
+                span.fz_14.ff_din.let-_015 2,3 Mb
+                              
+          li
+            a.certificate_unit(href='certificates.html')
+              .certificate_icon_w
+                .certificate_icon
+                  .certificate_doc
+                    span.ff_din.fz_14 .pdf
+
+              .certificate_name
+                span.ff_avenir_med.fz_16 Сертификат соответствия <br>ТУ 1381-002-13152697-2015
+              .certificate_date
+                span.fz_12.ff_avenir_med 30.06.2014
+              .certificate_size
+                span.fz_14.ff_din.let-_015 2,3 Mb
+                
+          li
+            a.certificate_unit(href='certificates.html')
+              .certificate_icon_w
+                .certificate_icon
+                  .certificate_doc
+                    span.ff_din.fz_14 .pdf
+    
+              .certificate_name
+                span.ff_avenir_med.fz_16 Декларация о соответствии<br>требованиям таможенного союза
+              .certificate_date
+                span.fz_12.ff_avenir_med 30.06.2014
+              .certificate_size
+                span.fz_14.ff_din.let-_015 2,3 Mb
+                        
+          li
+            a.certificate_unit(href='certificates.html')
+              .certificate_icon_w
+                .certificate_icon
+                  .certificate_doc
+                    span.ff_din.fz_14 .pdf
+    
+              .certificate_name
+                span.ff_avenir_med.fz_16 Сертификат соответствия <br>ГОСТ ISO 9001-2011 (ISO 9001:2008)
+              .certificate_date
+                span.fz_12.ff_avenir_med 30.06.2014
+              .certificate_size
+                span.fz_14.ff_din.let-_015 2,3 Mb
+                          
+          li
+            a.certificate_unit(href='certificates.html')
+              .certificate_icon_w
+                .certificate_icon
+                  .certificate_doc
+                    span.ff_din.fz_14 .pdf
+    
+              .certificate_name
+                span.ff_avenir_med.fz_16 Сертификат соответствия <br>ТУ 1381-002-13152697-2015
+              .certificate_date
+                span.fz_12.ff_avenir_med 30.06.2014
+              .certificate_size
+                span.fz_14.ff_din.let-_015 2,3 Mb
+    
+          li
+            a.certificate_unit(href='certificates.html')
+              .certificate_icon_w
+                .certificate_icon
+                  .certificate_doc
+                    span.ff_din.fz_14 .pdf
+    
+              .certificate_name
+                span.ff_avenir_med.fz_16 Декларация о соответствии<br>требованиям таможенного союза
+              .certificate_date
+                span.fz_12.ff_avenir_med 30.06.2014
+              .certificate_size
+                span.fz_14.ff_din.let-_015 2,3 Mb
+                                  

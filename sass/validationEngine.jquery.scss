@@ -29,6 +29,15 @@
 }
 
 .formError {
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
   position: absolute;
   top: 300px;
   left: 100% !important;
@@ -43,30 +52,20 @@
 
   &.relative_mode {
     //position   : relative !important;
-    left: 0 !important;
-    top: 100% !important;
-    right: 0 !important;
-    //bottom: 100% !important;
-    text-align: center;
+    top: 6 * $m !important;
+    left: 16 * $m !important;
+    margin-top: 0 !important;
+    font-size: .9em;
 
-    .error_top & {
-      bottom: 100% !important;
-      top: auto !important;
+    p {
+      font-family: $AvenirNextCyrMedium;
     }
 
     .input_w & {
-      //top: 100% !important;
-      //margin-top: 0 !important;
+      top: 100% !important;
+      margin-top: 0 !important;
     }
 
-    .formErrorContent p {
-      margin: 0 auto;
-      color: #ed145b;
-
-      ~ p {
-        display: none;
-      }
-    }
   }
 
   .input_w & {
@@ -85,7 +84,6 @@
       border-right: none;
       border-left: 8px solid #e82022;
     }
-
   }
 
   .error_holder_v1 & {
@@ -158,6 +156,14 @@
 .blackPopup .formErrorContent {
   background: #393939;
   color: #fff;
+}
+
+.one_msg .formErrorContent {
+  p {
+    + p {
+      display: none;
+    }
+  }
 }
 
 .formError .formErrorArrow {
@@ -265,14 +271,12 @@ body.rtl .formError .formErrorArrow {
   &.relative_mode {
     .formErrorContent {
       background: none;
-      color: #c30000;
+      color: #e75151;
       padding: 0;
-      font-size: 11px;
-      text-align: left;
+      font-size: 14 * $m;
 
       p {
-        //white-space: normal;
-        overflow: visible;
+        white-space: normal;
       }
     }
   }
@@ -373,7 +377,6 @@ body.rtl .formError .formErrorArrow {
   display: none;
   position: absolute;
   bottom: 100%;
-  //top           : 0;
   left: 0;
   right: 0;
   white-space: nowrap;

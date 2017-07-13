@@ -18,19 +18,19 @@ block content
       .delivery_map
         .delivery_info
           .section_caption.mb_20
-            span.fz_48.let-_03 Москва и московская область
+            span.fz_48.let-_03.ff_din Москва и московская область
     
           p
             span.fz_14.let_01 Наша компания доставит Ваш заказ по Москве и области собственным автотранпортом в кратчайшие сроки. Стоимоть и дату доставки вы можете узнать у наших менеджеров.
             
           .section_caption.mb_20
-            span.fz_48.let-_03 Регионы
+            span.fz_48.let-_03.ff_din Регионы
     
           p
             span.fz_14.let_01 Мы сотрудничаем с ведущими грузоперевозчиками. Наш менеджер сам свяжется с оператором доставки, согласует все детали и выставит вам счет без каких-либо наценок.
             
           .section_caption.mb_20
-            span.fz_48.let-_03 Самовывоз
+            span.fz_48.let-_03.ff_din Самовывоз
     
           p
             span.fz_14.let_01 Приобретенную продукцию завода наши клиенты также могут забрать самостоятельно. В этом случае для совершения отгрузки со склада необходимо будет предоставить документы, подтверждающие право на это лиц, осуществляющих вывоз
@@ -40,21 +40,26 @@ block content
 
       .delivery_calc
         .delivery_calc_caption 
-          span.fz_24 Расчитать стоимость доставки
+          span.fz_24.ff_din Расчитать стоимость доставки
         p 
           span.fz_18 Оставьте ваши данные, наш менеджер перезвонит вам и&nbsp;проконсультирует по стоимости и срокам доставки.
         
-        form(action='#')
-          .form_cell.form_cell_v1
-            input.f_input_v1.f_input(placeholder='Ваше имя')
-            
-          .form_cell.form_cell_v1
-            input.f_input_v1.f_input(placeholder='Телефон')
-            
+        form.validateMe(action='#')
+          .form_cell.form_cell_v1.formCell
+            input#user_name.f_input_v1.f_input.inpPlaceholder(class='validate[required]' data-errormessage="Похоже, вы неправильно указали имя")
+            label(for='user_name').f_placeholder
+              span.fz_14.ff_avenir_med Ваше имя 
+          .form_cell.form_cell_v1.formCell
+            input#user_phone.f_input_v1.f_input.inpPlaceholder(class='validate[required]' data-errormessage="Похоже, вы неправильно указали телефон")
+            label(for='user_phone').f_placeholder
+              span.fz_14.ff_avenir_med Телефон
+
           .form_cell.form_cell_v2
-            textarea.f_input_v1.f_input(placeholder='Комменарий (опционально)')
-            
+            textarea#user_comment.f_input_v1.f_input.inpPlaceholder()
+            label(for='user_comment').f_placeholder
+              span.fz_14.ff_avenir_med Комменарий (опционально)
+
           .form_cell.form_cell_v1
             button.btn_red.btn_v2.calc_btn
               span.fz_20 Отправить
-        
+              

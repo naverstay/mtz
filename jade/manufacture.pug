@@ -1,0 +1,97 @@
+extends _layout.pug
+include _mixins.pug
+
+block variables
+  - var $m = 0.0714286666666667;
+  - var page_title = 'MTZ производство';
+  - var html_class = 'manufacture_page full_height';
+  - var body_class = 'header_white_blue header_fixed';
+  - var has_footer = false;
+  - var nav_active = 2;
+  - var dropdown_active = 0;
+  - var script_set = 4;
+  - var menu_open_dt = true;
+
+block content
+  .manufacture_section
+    .section_inner
+      .manufactureSlider.swiper-container
+        .manufacture_list.swiper-wrapper
+          +loop_while(5)
+            .slide.swiper-slide
+              .manufacture_item
+                .manufacture_name
+                  span.ff_din Складирование<br>листов
+                .manufacture_img
+                  img(src='i/production_1.png')
+
+            .slide.swiper-slide
+              .manufacture_item
+                .manufacture_name
+                  span.ff_din Задача листов
+                .manufacture_img
+                  img(src='i/production_2.png')
+
+            .slide.swiper-slide
+              .manufacture_item
+                .manufacture_name
+                  span.ff_din Контроль<br>геометрии листов
+                .manufacture_img
+                  img(src='i/production_3.png')
+
+            .slide.swiper-slide
+              .manufacture_item
+                .manufacture_name
+                  span.ff_din Фрезерование<br>продольных кромок
+                .manufacture_img
+                  img(src='i/production_4.png')
+
+      .slider_dots.swiperPagination.ff_din
+
+    .manufacture_gallery_footer
+      .section_inner
+        .manufacture_gallery
+          .manufacture_gallery_control
+            a.manufacture_gallery_link.openGalleryBtn(href='#')
+              span.i-arrow_up.fz_26
+              span.fz_20.ff_din.let-_045 Открыть галерею
+          ul.manufacture_gallery_list
+            - sl =0;
+            while sl < 8
+              - sl++;
+              li
+                a.manufacture_gallery_link(href='#')
+                  img(src='i/gallery_' + sl + '.jpg')
+
+  .manufacture_gallery_holder.manufactureGallery
+    .swiper-container
+      .swiper-wrapper
+          .slide.swiper-slide(data-preview='i/video_preview_1.jpg')
+            <iframe class="video_block" src="https://www.youtube.com/embed/1Uc-9iBGzYw?enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+              
+          .slide.swiper-slide(data-preview='i/video_preview_1.jpg')
+            video.video_block(muted="muted", loop="loop" poster='i/video_bg.jpg')
+              source(src="video/video_bg.webm", type="video/webm")
+              source(src="video/video_bg.mp4", type="video/mp4")
+              
+          .slide.swiper-slide(data-preview='i/gallery_3.jpg')
+            img(src='i/big_gal_1.jpg')
+          .slide.swiper-slide(data-preview='i/gallery_4.jpg')
+            img(src='i/big_gal_1.jpg')
+
+    .galNext.manufacture_gallery_btn._next
+      .manufacture_gallery_preview
+        img(src='i/thumb_1.jpg')
+      .manufacture_gallery_arrow
+        span.i-chevron_right.fz_30
+        
+    .galPrev.manufacture_gallery_btn._prev
+      .manufacture_gallery_arrow
+        span.i-chevron_left.fz_30
+      .manufacture_gallery_preview
+        img(src='i/thumb_1.jpg')
+      
+    .manufacture_gallery_close
+      a.manufacture_gallery_link.openGalleryBtn(href='#')
+        span.i-arrow_down.fz_26
+        span.fz_20.ff_din.let-_045 Закрыть

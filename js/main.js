@@ -12,6 +12,7 @@ $(function ($) {
   browserWindow = $(window);
   body_var = $('body');
 
+  initPlaceholder();
 
   all_dialog_close();
 
@@ -26,6 +27,23 @@ $(window).on('resize', function () {
   windowRisize();
 
 });
+
+function initPlaceholder() {
+
+  var inp = $('.inpPlaceholder');
+
+  var e = 'blur'.split(',');
+  for (var i in e) inp.on(e[i], function () {
+    checkPlaceholder(this);
+  });
+
+}
+
+function checkPlaceholder(inp) {
+  var target = $(inp);
+  
+  target.toggleClass('is_empty', target.val().length > 0);
+}
 
 function windowRisize() {
 
@@ -50,10 +68,20 @@ function resizeMe(displayHeight, displayWidth) {
     var percentage = Math.min(heightPercentage, widthPercentage);
     var newFontSize = percentage.toFixed(2);
 
-    //body_var.css('font-size', (newFontSize * baseFZ) + 'em');
+    body_var.css('font-size', Math.min(baseFZ, newFontSize * baseFZ) + 'em');
   } else {
-    //body_var.css('font-size', baseFZ + 'em');
+    body_var.css('font-size', baseFZ + 'em');
   }
+
+  $('.slick-initialized').each(function (ind) {
+    $(this).slick('setPosition');
+  });
+
+  $('.swiper-container').each(function (ind) {
+    //this.swiper.update();
+    //$(this).slick('setPosition');
+  })
+
 }
 
 function all_dialog_close() {
@@ -66,5 +94,32 @@ function all_dialog_close_gl() {
     if (!$this.parent().hasClass('always_open')) {
       $this.dialog("close");
     }
+  });
+}
+
+function initValidation() {
+  $('.validateMe').each(function (ind) {
+    var f = $(this);
+
+    f.validationEngine({
+      //binded: false,
+      scroll: false,
+      showPrompts: true,
+      showArrow: false,
+      addSuccessCssClassToField: 'success',
+      addFailureCssClassToField: 'error',
+      parentFieldClass: '.formCell',
+      // parentFormClass: '.order_block',
+      promptPosition: "centerRight",
+      //doNotShowAllErrosOnSubmit: true,
+      //focusFirstField          : false,
+      autoHidePrompt: false,
+      autoHideDelay: 3000,
+      autoPositionUpdate: false,
+      prettySelect: true,
+      //useSuffix                : "_VE_field",
+      addPromptClass: 'relative_mode one_msg',
+      showOneMessage: false
+    });
   });
 }
