@@ -9,6 +9,7 @@
 .form_tip {
   opacity: .5;
   line-height: 1.4;
+  max-width: 456 * $m;
   padding-top: 8 * $m;
 }
 
@@ -69,7 +70,7 @@
     border-radius: 4px;
 
     &:focus {
-      padding-top: 25 * $m;
+      padding-top: 18 * $m;
       border-color: rgba(34, 116, 165, .4);
     }
 

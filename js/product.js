@@ -354,6 +354,21 @@ function hideActiveSlide(sld, ind) {
   }, 0);
 }
 
+$(window).resize(function () {
+
+  setTimeout(function () {
+    $('.slick-slider').each(function (ind) {
+      $(this).slick('setPosition');
+    });
+
+    var slk = tabSlider.slick('getSlick');
+
+    hideActiveSlide(slk, slk.currentSlide);
+
+  }, 1);
+
+});
+
 function tab_animation(panel) {
   var p = $(panel), target = p.index(), offset = 0, slider = $('.tabSlider');
 

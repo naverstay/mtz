@@ -5,8 +5,8 @@ var body_var,
   baseWindowWidth = 1920,
   baseRate = .47,
   baseFZ = 1.4,
-  minFZ = .9,
-  maxFZ = 1.5,
+  minFZ = 1.2,
+  maxFZ = 1.4,
   resizeTimer;
 
 $(function ($) {
@@ -69,9 +69,9 @@ function resizeMe(displayHeight, displayWidth) {
     var percentage = Math.min(heightPercentage, widthPercentage);
     var newFontSize = percentage.toFixed(2);
 
-    body_var.css('font-size', Math.min(maxFZ, newFontSize * baseFZ) + 'em');
+    body_var.css('font-size', Math.max(minFZ, Math.min(maxFZ, newFontSize * baseFZ)) + 'em');
   } else {
-    body_var.css('font-size', Math.max(minFZ, baseFZ) + 'em');
+    body_var.css('font-size', baseFZ + 'em');
   }
 
   $('.slick-initialized').each(function (ind) {
@@ -81,7 +81,9 @@ function resizeMe(displayHeight, displayWidth) {
   $('.swiper-container').each(function (ind) {
     //this.swiper.update();
     //$(this).slick('setPosition');
-  })
+  });
+
+  body_var.css('opacity', 1);
 
 }
 

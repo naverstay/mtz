@@ -58,10 +58,10 @@ block content
           ul.manufacture_gallery_list
             - sl =0;
             while sl < 8
-              - sl++;
               li
-                a.manufacture_gallery_link(href='#')
-                  img(src='i/gallery_' + sl + '.jpg')
+                a.manufacture_gallery_link.openGalleryBtn(href='#' data-slide= sl)
+                  img(src='i/gallery_' + (sl + 1) + '.jpg')
+              - sl++;
 
   .manufacture_gallery_holder.manufactureGallery
     .swiper-container
