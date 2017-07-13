@@ -5,6 +5,7 @@ var body_var,
   baseWindowWidth = 1920,
   baseRate = .47,
   baseFZ = 1.4,
+  minFZ = .9,
   maxFZ = 1.5,
   resizeTimer;
 
@@ -41,7 +42,7 @@ function initPlaceholder() {
 
 function checkPlaceholder(inp) {
   var target = $(inp);
-  
+
   target.toggleClass('is_empty', target.val().length > 0);
 }
 
@@ -68,9 +69,9 @@ function resizeMe(displayHeight, displayWidth) {
     var percentage = Math.min(heightPercentage, widthPercentage);
     var newFontSize = percentage.toFixed(2);
 
-    body_var.css('font-size', Math.min(baseFZ, newFontSize * baseFZ) + 'em');
+    body_var.css('font-size', Math.min(maxFZ, newFontSize * baseFZ) + 'em');
   } else {
-    body_var.css('font-size', baseFZ + 'em');
+    body_var.css('font-size', Math.max(minFZ, baseFZ) + 'em');
   }
 
   $('.slick-initialized').each(function (ind) {
